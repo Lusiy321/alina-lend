@@ -1,0 +1,158 @@
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { AnimSection, AnimItem, fadeUp } from "../utils/animations";
+
+const steps = [
+  {
+    step: "01",
+    time: "Day 1",
+    title: "Free Eligibility Check",
+    desc: "We confirm your 501(c)(3) status and assess if you're a good fit for the program. Takes 15 minutes. We tell you exactly what results are realistic for your mission.",
+    color: "from-emerald-500 to-emerald-700",
+    glowColor: "rgba(16,185,129,0.4)",
+  },
+  {
+    step: "02",
+    time: "Week 1–2",
+    title: "Grant Application",
+    desc: "We handle the full application process with Google — all paperwork, compliance checks, and submission. Approval typically takes 2–4 weeks.",
+    color: "from-blue-500 to-blue-700",
+    glowColor: "rgba(59,130,246,0.4)",
+  },
+  {
+    step: "03",
+    time: "Week 3–4",
+    title: "Account Setup & Launch",
+    desc: "We build your campaigns from scratch — keyword research, ad copywriting, conversion tracking, compliance setup. Everything ready for traffic.",
+    color: "from-purple-500 to-purple-700",
+    glowColor: "rgba(168,85,247,0.4)",
+  },
+  {
+    step: "04",
+    time: "Month 2+",
+    title: "First Traffic & Optimization",
+    desc: "Campaigns go live. We monitor, test, and optimize weekly. You receive a monthly report in plain English — no jargon.",
+    color: "from-yellow-500 to-yellow-700",
+    glowColor: "rgba(234,179,8,0.4)",
+  },
+  {
+    step: "05",
+    time: "Month 3+",
+    title: "Ongoing Growth",
+    desc: "As we learn what works for your audience, results improve each month. More donors, more volunteers, more program inquiries.",
+    color: "from-emerald-500 to-teal-600",
+    glowColor: "rgba(16,185,129,0.4)",
+  },
+];
+
+export default function HowItWorks() {
+  return (
+    <section
+      id="how-it-works"
+      className="relative py-24 sm:py-32 overflow-hidden bg-[#0e1929]/40"
+    >
+      <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
+      <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-blue-500/6 rounded-full blur-[140px] pointer-events-none" />
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <AnimSection>
+          <AnimItem variant={fadeUp}>
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="h-px w-12 bg-gradient-to-r from-transparent to-blue-500/50" />
+              <span className="text-blue-400 text-xs font-bold tracking-[0.2em] uppercase">
+                The Process
+              </span>
+              <div className="h-px w-12 bg-gradient-to-l from-transparent to-blue-500/50" />
+            </div>
+          </AnimItem>
+
+          <AnimItem variant={fadeUp}>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white text-center max-w-3xl mx-auto leading-tight mb-4">
+              From "I'm Interested" to{" "}
+              <span className="gradient-text">Live Campaigns in 30 Days.</span>
+            </h2>
+            <p className="text-slate-400 text-center max-w-xl mx-auto mb-16">
+              A clear, simple process — we handle everything, you get results.
+            </p>
+          </AnimItem>
+        </AnimSection>
+
+        {/* Timeline */}
+        <div className="relative">
+          {/* Connecting line */}
+          <div className="absolute left-6 sm:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-emerald-500/30 via-blue-500/20 to-emerald-500/10 hidden sm:block" />
+
+          <div className="space-y-8 sm:space-y-12">
+            {steps.map((step, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: i * 0.1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                className={`relative flex flex-col sm:flex-row gap-6 items-start ${i % 2 === 1 ? "sm:flex-row-reverse" : ""}`}
+              >
+                {/* Connector dot */}
+                <div className="absolute left-0 sm:left-1/2 sm:-translate-x-1/2 w-12 h-12 hidden sm:flex items-center justify-center z-10">
+                  <div
+                    className={`w-10 h-10 rounded-full bg-gradient-to-br ${step.color} flex items-center justify-center text-white font-black text-sm shadow-lg`}
+                    style={{ boxShadow: `0 0 20px ${step.glowColor}` }}
+                  >
+                    {step.step}
+                  </div>
+                </div>
+
+                {/* Card */}
+                <div
+                  className={`w-full sm:w-[calc(50%-2.5rem)] ${i % 2 === 0 ? "sm:mr-auto sm:pr-6" : "sm:ml-auto sm:pl-6"}`}
+                >
+                  <motion.div
+                    whileHover={{ y: -4 }}
+                    className="glass-card rounded-2xl p-6 sm:p-7 transition-all duration-300 hover:border-emerald-500/20"
+                  >
+                    {/* Mobile step number */}
+                    <div
+                      className={`sm:hidden w-10 h-10 rounded-full bg-gradient-to-br ${step.color} flex items-center justify-center text-white font-black text-sm mb-4`}
+                    >
+                      {step.step}
+                    </div>
+
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-white/[0.05] border border-white/[0.08] text-slate-400">
+                        {step.time}
+                      </span>
+                    </div>
+                    <h3 className="text-white font-bold text-xl mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">
+                      {step.desc}
+                    </p>
+                  </motion.div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Timeline summary */}
+        <AnimSection>
+          <AnimItem variant={fadeUp}>
+            <div className="mt-14 glass-card rounded-2xl p-6 sm:p-8 text-center">
+              <p className="text-white text-lg font-bold mb-2">
+                Total time from first contact to live campaigns:
+              </p>
+              <p className="text-5xl font-black gradient-text mb-3">~30 days</p>
+              <p className="text-slate-400">
+                Your team spends less than 2 hours on this. We handle everything
+                else.
+              </p>
+            </div>
+          </AnimItem>
+        </AnimSection>
+      </div>
+
+      <div className="section-divider mx-auto max-w-6xl mt-16" />
+    </section>
+  );
+}

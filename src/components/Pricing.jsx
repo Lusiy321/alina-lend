@@ -1,0 +1,208 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { CheckCircle, ChevronRight, AlertCircle, Zap } from "lucide-react";
+import { AnimSection, AnimItem, fadeUp, scaleIn } from "../utils/animations";
+
+const included = [
+  "Grant application & setup (one-time)",
+  "Website build if you need one",
+  "Full account management",
+  "Monthly campaign optimization",
+  "Monthly performance reporting",
+  "Dedicated account manager",
+  "Ongoing compliance monitoring",
+  "Guaranteed grant approval",
+  "Conversion tracking setup",
+  "Ad copywriting & A/B testing",
+];
+
+export default function Pricing() {
+  const [spotsLeft] = useState(4);
+
+  return (
+    <section id="pricing" className="relative py-24 sm:py-32 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-500/[0.03] to-transparent pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-emerald-500/8 rounded-full blur-[180px] pointer-events-none" />
+
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <AnimSection>
+          <AnimItem variant={fadeUp}>
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="h-px w-12 bg-gradient-to-r from-transparent to-emerald-500/50" />
+              <span className="text-emerald-400 text-xs font-bold tracking-[0.2em] uppercase">
+                Investment
+              </span>
+              <div className="h-px w-12 bg-gradient-to-l from-transparent to-emerald-500/50" />
+            </div>
+          </AnimItem>
+
+          <AnimItem variant={fadeUp}>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white text-center max-w-3xl mx-auto leading-tight mb-4">
+              Simple, Transparent Pricing.
+            </h2>
+            <p className="text-slate-400 text-center max-w-2xl mx-auto mb-14">
+              We'll match any legitimate competitor's price — because we
+              specialize exclusively in this.
+            </p>
+          </AnimItem>
+        </AnimSection>
+
+        <AnimSection>
+          <AnimItem variant={scaleIn}>
+            {/* Main pricing card */}
+            <div className="relative rounded-3xl overflow-hidden border border-emerald-500/25 mb-8">
+              {/* Glow border effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-emerald-700/5 pointer-events-none" />
+
+              {/* Header */}
+              <div className="relative bg-gradient-to-r from-emerald-600 to-emerald-800 px-8 py-6">
+                <div className="flex items-start justify-between gap-4 flex-wrap">
+                  <div>
+                    <div className="text-emerald-200 text-xs font-bold tracking-widest uppercase mb-2">
+                      Complete Management Plan
+                    </div>
+                    <h3 className="text-white text-2xl font-black">
+                      Full Google Ad Grants Service
+                    </h3>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-white/70 text-sm line-through mb-0.5">
+                      $997/mo
+                    </div>
+                    <div className="text-white font-black text-4xl leading-none">
+                      $597<span className="text-lg font-semibold">/mo</span>
+                    </div>
+                    <div className="text-emerald-200 text-xs mt-1">
+                      after free first month
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Body */}
+              <div className="relative px-8 py-8 glass-card border-0 rounded-none">
+                <div className="grid sm:grid-cols-2 gap-3 mb-8">
+                  {included.map((item, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.06 }}
+                      viewport={{ once: true }}
+                      className="flex items-start gap-2.5"
+                    >
+                      <CheckCircle
+                        size={16}
+                        className="text-emerald-400 flex-shrink-0 mt-0.5"
+                      />
+                      <span className="text-slate-300 text-sm">{item}</span>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* First month free highlight */}
+                <div className="rounded-2xl p-5 bg-gradient-to-r from-yellow-400/10 to-yellow-600/5 border border-yellow-400/20 mb-6 text-center">
+                  <div className="text-3xl mb-2">🎁</div>
+                  <div className="text-yellow-300 font-black text-xl mb-1">
+                    FIRST MONTH FREE
+                  </div>
+                  <p className="text-slate-300 text-sm">
+                    We only charge once your grant is live and your campaigns
+                    are actively running. Zero risk to you.
+                  </p>
+                </div>
+
+                <button
+                  onClick={() =>
+                    document
+                      .querySelector("#contact")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                  className="btn-primary w-full justify-center text-lg !py-4 !px-8 mb-3"
+                >
+                  Start My Free Month →
+                </button>
+                <p className="text-center text-slate-500 text-xs">
+                  No credit card required · Cancel anytime · 30-day notice
+                </p>
+              </div>
+            </div>
+          </AnimItem>
+
+          {/* Price match */}
+          <AnimItem variant={fadeUp}>
+            <div className="glass-card rounded-2xl p-6 sm:p-8 mb-6">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-blue-500/15 flex items-center justify-center flex-shrink-0">
+                  <Zap size={22} className="text-blue-400" />
+                </div>
+                <div>
+                  <h3 className="text-white font-bold text-xl mb-2">
+                    Price Match Guarantee
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed mb-3">
+                    Found a lower price? We'll beat it. If you find a legitimate
+                    registered agency (not a freelancer) offering the same scope
+                    of Google Ad Grants management for a lower monthly rate —
+                    <strong className="text-white">
+                      {" "}
+                      show us the quote. We'll match or beat their price.
+                    </strong>
+                  </p>
+                  <p className="text-slate-400 text-sm italic">
+                    Why are we confident? Because we specialize exclusively in
+                    Google Ad Grants for nonprofits. Generalist agencies charge
+                    the same but deliver less.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </AnimItem>
+
+          {/* Urgency block */}
+          <AnimItem variant={fadeUp}>
+            <div className="urgency-box p-6 sm:p-8">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-yellow-400/15 flex items-center justify-center flex-shrink-0">
+                  <AlertCircle size={20} className="text-yellow-400" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-yellow-300 font-bold text-lg mb-2">
+                    ⚠️ Limited Spots Available
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed mb-4">
+                    Our team manages each account hands-on — which means we
+                    can't take on unlimited clients without compromising
+                    quality. We currently have limited spots open for new
+                    nonprofits. Every month without the grant is $10,000 in free
+                    advertising you don't get back.
+                  </p>
+                  <div className="flex items-center justify-between flex-wrap gap-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-red-400 pulse-green" />
+                      <span className="text-red-400 font-bold text-sm">
+                        {spotsLeft} spots remaining this month
+                      </span>
+                    </div>
+                    <button
+                      onClick={() =>
+                        document
+                          .querySelector("#contact")
+                          ?.scrollIntoView({ behavior: "smooth" })
+                      }
+                      className="btn-primary text-sm !py-2.5 !px-5"
+                    >
+                      Secure My Spot <ChevronRight size={14} />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </AnimItem>
+        </AnimSection>
+      </div>
+
+      <div className="section-divider mx-auto max-w-6xl mt-16" />
+    </section>
+  );
+}
