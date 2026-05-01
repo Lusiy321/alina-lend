@@ -16,8 +16,8 @@ export default function Guarantee() {
               <div className="absolute top-0 left-0 w-40 h-40 bg-emerald-500/15 rounded-full blur-[60px] pointer-events-none" />
               <div className="absolute bottom-0 right-0 w-40 h-40 bg-emerald-500/15 rounded-full blur-[60px] pointer-events-none" />
 
-              <div className="relative z-10">
-                {/* Shield icon */}
+              <div className="relative z-10 flex flex-col items-center">
+                {/* Shield icon + label stacked */}
                 <motion.div
                   animate={{ y: [-4, 4, -4] }}
                   transition={{
@@ -25,13 +25,13 @@ export default function Guarantee() {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className="inline-flex w-20 h-20 rounded-full bg-emerald-500/15 border border-emerald-500/30 items-center justify-center mb-6 mx-auto glow-green"
+                  className="w-24 h-24 rounded-full bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center mb-5 glow-green"
                 >
-                  <ShieldCheck size={38} className="text-emerald-400" />
+                  <ShieldCheck size={44} className="text-emerald-400" />
                 </motion.div>
 
                 {/* Label */}
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-5">
+                <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-7">
                   <span className="text-emerald-400 text-xs font-bold tracking-widest uppercase">
                     Our Guarantee
                   </span>
