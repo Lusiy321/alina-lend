@@ -170,7 +170,7 @@ export default function Pricing() {
             <div className="urgency-box p-6 sm:p-8">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-yellow-400/15 flex items-center justify-center flex-shrink-0">
-                  <AlertCircle size={20} className="text-yellow-400" />
+                  <AlertCircle size={20} className="text-black-400" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-red-400 font-bold text-lg mb-2">
