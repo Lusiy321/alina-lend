@@ -20,8 +20,8 @@ export default function SocialProofBar() {
   const doubled = [...clients, ...clients];
 
   return (
-    <section className="relative py-12 bg-[#0e1929] border-y border-white/[0.05] overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0b1120] via-transparent to-[#0b1120] z-10 pointer-events-none" />
+    <section className="relative py-12 bg-[#f0eee6] border-y border-[#ebe9e0] overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-[#f0eee6] via-transparent to-[#f0eee6] z-10 pointer-events-none" />
 
       <AnimSection>
         <AnimItem variant={fadeIn}>

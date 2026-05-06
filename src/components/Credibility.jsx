@@ -222,7 +222,7 @@ export default function Credibility() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: i * 0.05 }}
                     viewport={{ once: true }}
-                    className="px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/15 text-emerald-300 text-sm font-medium hover:bg-emerald-500/20 transition-colors cursor-default"
+                    className="px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/15 text-slate-400 text-sm font-medium hover:bg-emerald-500/20 transition-colors cursor-default"
                   >
                     {n}
                   </motion.span>

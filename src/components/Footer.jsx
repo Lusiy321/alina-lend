@@ -4,13 +4,13 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#080e1c] border-t border-white/[0.05] py-14">
+    <footer className="bg-[#ebe9e0] border-t border-[#dbdbd8] py-14">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <img
-              src="/nonprofit-logo-light.svg"
+              src="/nonprofit-logo.svg"
               alt="GrantBoost"
               className="h-7 w-auto mb-5"
             />

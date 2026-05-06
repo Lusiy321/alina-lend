@@ -164,17 +164,17 @@ export default function Opportunity() {
               <div className="flex items-start gap-3">
                 <span className="text-2xl">⚠️</span>
                 <div>
-                  <p className="text-yellow-300 font-bold mb-1">
+                  <p className="text-[#c44a32] font-bold mb-1">
                     Every month you wait...
                   </p>
                   <p className="text-slate-300 text-sm leading-relaxed">
                     ...is{" "}
-                    <strong className="text-yellow-400">
+                    <strong className="text-[#c44a32]">
                       $10,000 in free advertising
                     </strong>{" "}
                     that disappears forever. It doesn't accumulate or carry
                     over. Waiting 3 months to start costs you{" "}
-                    <strong className="text-yellow-400">
+                    <strong className="text-[#c44a32]">
                       $30,000 in potential reach.
                     </strong>
                   </p>

@@ -29,7 +29,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#0b1120]/95 backdrop-blur-lg border-b border-white/[0.06] py-3"
+          ? "bg-[#f8f7f3]/95 backdrop-blur-lg border-b border-[#ebe9e0] py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -44,7 +44,7 @@ export default function Header() {
           className="flex items-center group"
         >
           <img
-            src="/nonprofit-logo-light.svg"
+            src="/nonprofit-logo.svg"
             alt="GrantBoost"
             className="h-8 w-auto group-hover:opacity-90 transition-opacity duration-300"
           />
@@ -65,16 +65,12 @@ export default function Header() {
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              document
-                .querySelector("#contact")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
+            href="https://api.dgtl-house.com/widget/bookings/dgtlhouse-nonprofits"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary text-sm !py-2.5 !px-5"
           >
-            Check Eligibility
+            Schedule call
             <ChevronRight size={16} />
           </a>
         </div>
@@ -95,7 +91,7 @@ export default function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden border-t border-white/[0.06] bg-[#0b1120]/98 backdrop-blur-lg"
+            className="md:hidden border-t border-[#ebe9e0] bg-[#f8f7f3]/98 backdrop-blur-lg"
           >
             <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
               {navLinks.map((link) => (
@@ -108,13 +104,15 @@ export default function Header() {
                 </button>
               ))}
               <div className="pt-3 border-t border-white/[0.06] mt-2">
-                <button
-                  onClick={() => handleNav("#hero")}
+                <a
+                  href="https://api.dgtl-house.com/widget/bookings/dgtlhouse-nonprofits"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-primary w-full justify-center"
                 >
-                  Check My Eligibility
+                  Check Eligibility
                   <ChevronRight size={16} />
-                </button>
+                </a>
               </div>
             </div>
           </motion.div>

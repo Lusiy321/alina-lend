@@ -55,7 +55,13 @@ export default function Pricing() {
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-emerald-700/5 pointer-events-none" />
 
               {/* Header */}
-              <div className="relative bg-gradient-to-r from-emerald-600 to-emerald-800 px-8 py-6">
+              <div
+                className="relative px-8 py-6"
+                style={{
+                  background:
+                    "linear-gradient(135deg, rgba(196, 237, 130, 0.36) 0%, rgba(170, 201, 118, 0.18) 100%)",
+                }}
+              >
                 <div className="flex items-start justify-between gap-4 flex-wrap">
                   <div>
                     <div className="text-emerald-200 text-xs font-bold tracking-widest uppercase mb-2">
@@ -103,7 +109,7 @@ export default function Pricing() {
                 {/* First month free highlight */}
                 <div className="rounded-2xl p-5 bg-gradient-to-r from-yellow-400/10 to-yellow-600/5 border border-yellow-400/20 mb-6 text-center">
                   <div className="text-3xl mb-2">🎁</div>
-                  <div className="text-yellow-300 font-black text-xl mb-1">
+                  <div className="text-red-400 font-black text-xl mb-1">
                     FIRST MONTH FREE
                   </div>
                   <p className="text-slate-300 text-sm">
@@ -167,7 +173,7 @@ export default function Pricing() {
                   <AlertCircle size={20} className="text-yellow-400" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-yellow-300 font-bold text-lg mb-2">
+                  <h3 className="text-red-400 font-bold text-lg mb-2">
                     ⚠️ Limited Spots Available
                   </h3>
                   <p className="text-slate-300 text-sm leading-relaxed mb-4">

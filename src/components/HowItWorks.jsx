@@ -8,40 +8,40 @@ const steps = [
     time: "Day 1",
     title: "Free Eligibility Check",
     desc: "We confirm your 501(c)(3) status and assess if you're a good fit for the program. Takes 15 minutes. We tell you exactly what results are realistic for your mission.",
-    color: "from-emerald-500 to-emerald-700",
-    glowColor: "rgba(16,185,129,0.4)",
+    bg: "linear-gradient(135deg, #aac976, #3f5028)",
+    glowColor: "rgba(170,201,118,0.5)",
   },
   {
     step: "02",
     time: "Week 1–2",
     title: "Grant Application",
     desc: "We handle the full application process with Google — all paperwork, compliance checks, and submission. Approval typically takes 2–4 weeks.",
-    color: "from-blue-500 to-blue-700",
-    glowColor: "rgba(59,130,246,0.4)",
+    bg: "linear-gradient(135deg, #3b82f6, #1d4ed8)",
+    glowColor: "rgba(59,130,246,0.5)",
   },
   {
     step: "03",
     time: "Week 3–4",
     title: "Account Setup & Launch",
     desc: "We build your campaigns from scratch — keyword research, ad copywriting, conversion tracking, compliance setup. Everything ready for traffic.",
-    color: "from-purple-500 to-purple-700",
-    glowColor: "rgba(168,85,247,0.4)",
+    bg: "linear-gradient(135deg, #a855f7, #7e22ce)",
+    glowColor: "rgba(168,85,247,0.5)",
   },
   {
     step: "04",
     time: "Month 2+",
     title: "First Traffic & Optimization",
     desc: "Campaigns go live. We monitor, test, and optimize weekly. You receive a monthly report in plain English — no jargon.",
-    color: "from-yellow-500 to-yellow-700",
-    glowColor: "rgba(234,179,8,0.4)",
+    bg: "linear-gradient(135deg, #f59e0b, #b45309)",
+    glowColor: "rgba(245,158,11,0.5)",
   },
   {
     step: "05",
     time: "Month 3+",
     title: "Ongoing Growth",
     desc: "As we learn what works for your audience, results improve each month. More donors, more volunteers, more program inquiries.",
-    color: "from-emerald-500 to-teal-600",
-    glowColor: "rgba(16,185,129,0.4)",
+    bg: "linear-gradient(135deg, #c4ed82, #3f5028)",
+    glowColor: "rgba(196,237,130,0.5)",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="relative py-24 sm:py-32 overflow-hidden bg-[#0e1929]/40"
+      className="relative py-24 sm:py-32 overflow-hidden bg-[#f0eee6]/60"
     >
       <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
       <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-blue-500/6 rounded-full blur-[140px] pointer-events-none" />
@@ -95,8 +95,11 @@ export default function HowItWorks() {
                 {/* Connector dot */}
                 <div className="absolute left-0 sm:left-1/2 sm:-translate-x-1/2 w-12 h-12 hidden sm:flex items-center justify-center z-10">
                   <div
-                    className={`w-10 h-10 rounded-full bg-gradient-to-br ${step.color} flex items-center justify-center text-white font-black text-sm shadow-lg`}
-                    style={{ boxShadow: `0 0 20px ${step.glowColor}` }}
+                    className="w-10 h-10 rounded-full flex items-center justify-center font-black text-sm text-white shadow-lg"
+                    style={{
+                      background: step.bg,
+                      boxShadow: `0 0 20px ${step.glowColor}`,
+                    }}
                   >
                     {step.step}
                   </div>
@@ -112,7 +115,8 @@ export default function HowItWorks() {
                   >
                     {/* Mobile step number */}
                     <div
-                      className={`sm:hidden w-10 h-10 rounded-full bg-gradient-to-br ${step.color} flex items-center justify-center text-white font-black text-sm mb-4`}
+                      className="sm:hidden w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-sm mb-4"
+                      style={{ background: step.bg }}
                     >
                       {step.step}
                     </div>

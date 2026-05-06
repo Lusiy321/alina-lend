@@ -9,7 +9,7 @@ import {
 
 export default function WhatIsGrants() {
   return (
-    <section className="relative py-24 sm:py-32 overflow-hidden bg-[#0e1929]/60">
+    <section className="relative py-24 sm:py-32 overflow-hidden bg-[#f0eee6]/70">
       <div className="absolute inset-0 grid-bg opacity-50 pointer-events-none" />
       <div className="absolute top-0 left-1/3 w-96 h-96 bg-blue-500/6 rounded-full blur-[140px] pointer-events-none" />
 

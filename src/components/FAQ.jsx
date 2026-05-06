@@ -110,7 +110,7 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="relative py-24 sm:py-32 overflow-hidden bg-[#0e1929]/40"
+      className="relative py-24 sm:py-32 overflow-hidden bg-[#f0eee6]/60"
     >
       <div className="absolute inset-0 grid-bg opacity-20 pointer-events-none" />
 

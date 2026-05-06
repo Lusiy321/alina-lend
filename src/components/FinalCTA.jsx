@@ -248,7 +248,7 @@ export default function FinalCTA() {
                       key={i}
                       src={person.src}
                       alt={person.alt}
-                      className="w-9 h-9 rounded-full object-cover border-2 border-[#0b1120]"
+                      className="w-9 h-9 rounded-full object-cover border-2 border-[#f8f7f3]"
                     />
                   ))}
                 </div>
