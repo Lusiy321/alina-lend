@@ -7,7 +7,7 @@
 
 @theme {
     --font-sans: "Lexend", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --font-mono: "Chivo Mono", ui-monospace, SFMono-Regular, monospace;
+    --font-display: "Neue Montreal", "Lexend", -apple-system, BlinkMacSystemFont, sans-serif;
 
     /* Brand palette */
     --color-cream-50: #ffffff;
@@ -144,7 +144,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Lexend", sans-serif;
+    font-family: "Neue Montreal", "Lexend", -apple-system, BlinkMacSystemFont, sans-serif;
     letter-spacing: -0.02em;
 }
 
