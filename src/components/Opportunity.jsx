@@ -1,5 +1,7 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { DollarSign, Search, ArrowRight } from "lucide-react";
+import { useInView } from "react-intersection-observer";
 import {
   AnimSection,
   AnimItem,
@@ -22,7 +24,7 @@ function CounterStat({ end, prefix = "", suffix = "", label, decimals = 0 }) {
   const { count, ref } = useCounter(end, 2200);
   return (
     <div ref={ref} className="text-center">
-      <div className="text-4xl sm:text-5xl font-black gradient-text mb-2">
+      <div className="text-2xl sm:text-4xl lg:text-5xl font-black gradient-text mb-2">
         {prefix}
         {decimals > 0 ? count.toFixed(decimals) : count.toLocaleString()}
         {suffix}
@@ -32,25 +34,182 @@ function CounterStat({ end, prefix = "", suffix = "", label, decimals = 0 }) {
   );
 }
 
+function PhoneMockup() {
+  const [typedText, setTypedText] = useState("");
+  const [queryIndex, setQueryIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [showAd, setShowAd] = useState(false);
+  const [showResults, setShowResults] = useState(false);
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
+
+  const queries = [
+    "food bank near me",
+    "volunteer opportunities",
+    "donate to animal shelter",
+    "mental health nonprofit",
+  ];
+
+  useEffect(() => {
+    if (!inView) return;
+    const current = queries[queryIndex];
+    let timeout;
+
+    if (!isDeleting && typedText === current) {
+      // Fully typed — show ad/results, pause, then start deleting
+      setShowAd(true);
+      setTimeout(() => setShowResults(true), 450);
+      timeout = setTimeout(() => {
+        setShowAd(false);
+        setShowResults(false);
+        setIsDeleting(true);
+      }, 2400);
+    } else if (isDeleting && typedText === "") {
+      // Fully deleted — move to next query
+      setIsDeleting(false);
+      setQueryIndex((i) => (i + 1) % queries.length);
+      timeout = setTimeout(() => {}, 300);
+    } else {
+      // Typing or deleting one character
+      timeout = setTimeout(
+        () => {
+          setTypedText((t) =>
+            isDeleting ? t.slice(0, -1) : current.slice(0, t.length + 1),
+          );
+        },
+        isDeleting ? 45 : 85,
+      );
+    }
+
+    return () => clearTimeout(timeout);
+  }, [inView, typedText, isDeleting, queryIndex]);
+
+  return (
+    <div ref={ref} className="relative mx-auto w-[260px] sm:w-[300px]">
+      {/* Phone shell */}
+      <div
+        className="relative rounded-[44px] bg-[#111] p-[10px]"
+        style={{
+          boxShadow:
+            "0 50px 100px -20px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.08)",
+        }}
+      >
+        {/* Buttons */}
+        <div className="absolute left-[-3px] top-[80px] w-[3px] h-8 bg-[#333] rounded-l-sm" />
+        <div className="absolute left-[-3px] top-[124px] w-[3px] h-10 bg-[#333] rounded-l-sm" />
+        <div className="absolute left-[-3px] top-[170px] w-[3px] h-10 bg-[#333] rounded-l-sm" />
+        <div className="absolute right-[-3px] top-[120px] w-[3px] h-14 bg-[#333] rounded-r-sm" />
+        {/* Screen */}
+        <div
+          className="relative rounded-[36px] overflow-hidden"
+          style={{ minHeight: 530, backgroundColor: "#ffffff" }}
+        >
+          {/* Dynamic Island */}
+          <div
+            className="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-7 rounded-full z-10"
+            style={{ backgroundColor: "#000000" }}
+          />
+          <div className="pt-12 pb-6 px-3">
+            {/* Google wordmark */}
+            <div className="text-center mb-3">
+              <span className="text-2xl font-black tracking-tight">
+                <span className="text-[#4285F4]">G</span>
+                <span className="text-[#EA4335]">o</span>
+                <span className="text-[#FBBC05]">o</span>
+                <span className="text-[#4285F4]">g</span>
+                <span className="text-[#34A853]">l</span>
+                <span className="text-[#EA4335]">e</span>
+              </span>
+            </div>
+            {/* Search bar */}
+            <div
+              className="flex items-center gap-2 border border-gray-300 rounded-full px-3.5 py-2 mb-4 shadow-sm"
+              style={{ backgroundColor: "#ffffff" }}
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="13"
+                height="13"
+                fill="none"
+                stroke="#9aa0a6"
+                strokeWidth="2.5"
+              >
+                <circle cx="11" cy="11" r="7" />
+                <path d="m21 21-4-4" />
+              </svg>
+              <span className="text-gray-800 text-[12px] flex-1 font-medium">
+                {typedText}
+                <span className="inline-block w-px h-[12px] bg-gray-700 ml-0.5 animate-pulse align-middle" />
+              </span>
+            </div>
+            {/* Ad card */}
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={showAd ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="mb-3 p-3 border border-[#e8f0fe] rounded-xl bg-[#fafbff] shadow-sm"
+            >
+              <div className="flex items-center gap-1.5 mb-1">
+                <span className="text-[8px] font-bold text-gray-600 border border-gray-400 rounded px-1 py-px leading-none">
+                  Ad
+                </span>
+                <span className="text-[9px] text-green-700 font-medium">
+                  www.yournonprofit.org
+                </span>
+              </div>
+              <p className="text-[#1558D6] text-[12px] font-semibold leading-snug mb-1">
+                City Food Bank — Help Fight Hunger
+              </p>
+              <p className="text-gray-500 text-[10px] leading-relaxed">
+                Donate food or volunteer today. Serving 10,000+ families
+                monthly.
+              </p>
+            </motion.div>
+            {/* Skeleton organic results */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={showResults ? { opacity: 1 } : {}}
+              transition={{ duration: 0.5 }}
+              className="space-y-2.5"
+            >
+              {[
+                { w1: "55%", w2: "80%", w3: "90%", w4: "65%" },
+                { w1: "60%", w2: "75%", w3: "85%", w4: "70%" },
+              ].map((row, i) => (
+                <div key={i} className="p-2.5 rounded-lg bg-gray-50">
+                  <div
+                    className="h-[7px] bg-gray-200 rounded mb-1.5"
+                    style={{ width: row.w1 }}
+                  />
+                  <div
+                    className="h-[9px] bg-gray-300 rounded mb-1"
+                    style={{ width: row.w2 }}
+                  />
+                  <div
+                    className="h-[7px] bg-gray-200 rounded mb-1"
+                    style={{ width: row.w3 }}
+                  />
+                  <div
+                    className="h-[7px] bg-gray-200 rounded"
+                    style={{ width: row.w4 }}
+                  />
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Opportunity() {
   return (
-    <section className="relative py-24 sm:py-32 overflow-hidden">
-      {/* Big green glow in center */}
-      <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/[0.04] via-transparent to-transparent pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-emerald-500/8 rounded-full blur-[160px] pointer-events-none" />
-
+    <section
+      id="opportunity"
+      className="relative pb-24 sm:pb-32 overflow-hidden"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <AnimSection>
-          <AnimItem variant={fadeUp}>
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent to-emerald-500/50" />
-              <span className="text-emerald-400 text-xs font-bold tracking-[0.2em] uppercase">
-                The Opportunity
-              </span>
-              <div className="h-px w-12 bg-gradient-to-l from-transparent to-emerald-500/50" />
-            </div>
-          </AnimItem>
-
           <AnimItem variant={fadeUp}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white text-center max-w-4xl mx-auto leading-tight mb-6">
               <span className="gradient-text">$10,000/Month.</span> Every Month.{" "}
@@ -206,6 +365,45 @@ export default function Opportunity() {
             </div>
           </AnimItem>
         </AnimSection>
+
+        {/* Phone mockup demo */}
+        <div className="mt-20 flex flex-col items-center">
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center text-slate-400 text-xs font-semibold tracking-[0.2em] uppercase mb-10"
+          >
+            Here's what it looks like in Google Search
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 32 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+            viewport={{ once: true }}
+          >
+            <PhoneMockup />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="mt-10"
+          >
+            <button
+              onClick={() =>
+                document
+                  .querySelector("#contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="btn-primary text-lg !py-4 !px-8"
+            >
+              Check My Eligibility →
+            </button>
+          </motion.div>
+        </div>
       </div>
 
       <div className="section-divider mx-auto max-w-6xl mt-16" />

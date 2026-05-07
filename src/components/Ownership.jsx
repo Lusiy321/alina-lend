@@ -31,16 +31,6 @@ export default function Ownership() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <AnimSection>
           <AnimItem variant={fadeUp}>
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent to-emerald-500/50" />
-              <span className="text-emerald-400 text-xs font-bold tracking-[0.2em] uppercase">
-                Full Transparency
-              </span>
-              <div className="h-px w-12 bg-gradient-to-l from-transparent to-emerald-500/50" />
-            </div>
-          </AnimItem>
-
-          <AnimItem variant={fadeUp}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white text-center mb-4 leading-tight">
               Your Account. Your Data.{" "}
               <span className="gradient-text">Always.</span>
@@ -53,66 +43,87 @@ export default function Ownership() {
 
           <div className="grid sm:grid-cols-2 gap-5">
             {points.map((point, i) => (
-              <AnimItem key={i} variant={fadeUp}>
-                <motion.div
-                  whileHover={{ y: -4, borderColor: "rgba(16,185,129,0.3)" }}
-                  className="glass-card rounded-2xl p-6 flex gap-4 transition-all duration-300 cursor-default"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                    {point.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-white font-bold mb-2">{point.title}</h3>
-                    <p className="text-slate-400 text-sm leading-relaxed">
-                      {point.desc}
-                    </p>
-                  </div>
-                </motion.div>
-              </AnimItem>
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.6,
+                  delay: i * 0.1,
+                  ease: [0.25, 0.1, 0.25, 1],
+                }}
+                viewport={{ once: true }}
+                whileHover={{ y: -4, borderColor: "rgba(16,185,129,0.3)" }}
+                className="glass-card rounded-2xl p-6 flex gap-4 transition-all duration-300 cursor-default"
+              >
+                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                  {point.icon}
+                </div>
+                <div>
+                  <h3 className="text-white font-bold mb-2">{point.title}</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">
+                    {point.desc}
+                  </p>
+                </div>
+              </motion.div>
             ))}
           </div>
 
           {/* Visual comparison */}
-          <AnimItem variant={fadeUp}>
-            <div className="mt-10 grid sm:grid-cols-2 gap-5">
-              <div className="rounded-2xl p-5 bg-red-500/6 border border-red-500/15">
-                <div className="text-red-400 font-bold text-sm mb-3 flex items-center gap-2">
-                  <X size={14} /> Other agencies
-                </div>
-                <div className="space-y-2 text-slate-400 text-sm">
-                  {[
-                    "They own the account",
-                    "Data disappears when you leave",
-                    "Long-term contracts",
-                    "Account held hostage",
-                  ].map((t, i) => (
-                    <div key={i} className="flex items-center gap-2">
-                      <X size={12} className="text-red-500/60" />
-                      {t}
-                    </div>
-                  ))}
-                </div>
+          <div className="mt-10 grid sm:grid-cols-2 gap-5">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+              viewport={{ once: true }}
+              className="rounded-2xl p-5 bg-red-500/6 border border-red-500/15"
+            >
+              <div className="text-red-400 font-bold text-sm mb-3 flex items-center gap-2">
+                <X size={14} /> Other agencies
               </div>
-              <div className="rounded-2xl p-5 bg-emerald-500/8 border border-emerald-500/20">
-                <div className="text-emerald-400 font-bold text-sm mb-3 flex items-center gap-2">
-                  <Shield size={14} /> GrantBoost
-                </div>
-                <div className="space-y-2 text-slate-300 text-sm">
-                  {[
-                    "You own the account 100%",
-                    "All data stays with you",
-                    "Cancel anytime, 30 days notice",
-                    "Full transparency, always",
-                  ].map((t, i) => (
-                    <div key={i} className="flex items-center gap-2">
-                      <span className="text-emerald-400">✓</span>
-                      {t}
-                    </div>
-                  ))}
-                </div>
+              <div className="space-y-2 text-slate-400 text-sm">
+                {[
+                  "They own the account",
+                  "Data disappears when you leave",
+                  "Long-term contracts",
+                  "Account held hostage",
+                ].map((t, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <X size={12} className="text-red-500/60" />
+                    {t}
+                  </div>
+                ))}
               </div>
-            </div>
-          </AnimItem>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: 0.1,
+                ease: [0.25, 0.1, 0.25, 1],
+              }}
+              viewport={{ once: true }}
+              className="rounded-2xl p-5 bg-emerald-500/8 border border-emerald-500/20"
+            >
+              <div className="text-emerald-400 font-bold text-sm mb-3 flex items-center gap-2">
+                <Shield size={14} /> DGTL-House
+              </div>
+              <div className="space-y-2 text-slate-300 text-sm">
+                {[
+                  "You own the account 100%",
+                  "All data stays with you",
+                  "Cancel anytime, 30 days notice",
+                  "Full transparency, always",
+                ].map((t, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <span className="text-emerald-400">✓</span>
+                    {t}
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
         </AnimSection>
       </div>
 

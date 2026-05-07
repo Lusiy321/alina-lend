@@ -248,6 +248,8 @@ export default function FinalCTA() {
                       key={i}
                       src={person.src}
                       alt={person.alt}
+                      loading="lazy"
+                      decoding="async"
                       className="w-9 h-9 rounded-full object-cover border-2 border-[#f8f7f3]"
                     />
                   ))}

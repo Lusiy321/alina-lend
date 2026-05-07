@@ -1,19 +1,22 @@
+import { lazy, Suspense } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import SocialProofBar from "./components/SocialProofBar";
-import Problem from "./components/Problem";
-import Opportunity from "./components/Opportunity";
-import WhatIsGrants from "./components/WhatIsGrants";
-import Credibility from "./components/Credibility";
-import Guarantee from "./components/Guarantee";
-import Ownership from "./components/Ownership";
-import Solution from "./components/Solution";
-import HowItWorks from "./components/HowItWorks";
-import Pricing from "./components/Pricing";
-import FAQ from "./components/FAQ";
-import FinalCTA from "./components/FinalCTA";
-import Footer from "./components/Footer";
-import ScrollToTop from "./components/ScrollToTop";
+
+// Below-the-fold components are loaded on demand to shrink the initial JS bundle.
+const Problem = lazy(() => import("./components/Problem"));
+const Opportunity = lazy(() => import("./components/Opportunity"));
+const WhatIsGrants = lazy(() => import("./components/WhatIsGrants"));
+const Credibility = lazy(() => import("./components/Credibility"));
+const Guarantee = lazy(() => import("./components/Guarantee"));
+const Ownership = lazy(() => import("./components/Ownership"));
+const Solution = lazy(() => import("./components/Solution"));
+const HowItWorks = lazy(() => import("./components/HowItWorks"));
+const Pricing = lazy(() => import("./components/Pricing"));
+const FAQ = lazy(() => import("./components/FAQ"));
+const FinalCTA = lazy(() => import("./components/FinalCTA"));
+const Footer = lazy(() => import("./components/Footer"));
+const ScrollToTop = lazy(() => import("./components/ScrollToTop"));
 
 export default function App() {
   return (
@@ -22,20 +25,24 @@ export default function App() {
       <main>
         <Hero />
         <SocialProofBar />
-        <Problem />
-        <Opportunity />
-        <WhatIsGrants />
-        <Credibility />
-        <Guarantee />
-        <Ownership />
-        <Solution />
-        <HowItWorks />
-        <Pricing />
-        <FAQ />
-        <FinalCTA />
+        <Suspense fallback={<div style={{ minHeight: "100vh" }} />}>
+          <Problem />
+          <Opportunity />
+          <WhatIsGrants />
+          <Credibility />
+          <Guarantee />
+          <Ownership />
+          <Solution />
+          <HowItWorks />
+          <Pricing />
+          <FAQ />
+          <FinalCTA />
+        </Suspense>
       </main>
-      <Footer />
-      <ScrollToTop />
+      <Suspense fallback={null}>
+        <Footer />
+        <ScrollToTop />
+      </Suspense>
     </div>
   );
 }

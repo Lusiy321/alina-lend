@@ -11,7 +11,11 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <img
               src="/nonprofit-logo.svg"
-              alt="GrantBoost"
+              alt="DGTL-House"
+              width="140"
+              height="28"
+              loading="lazy"
+              decoding="async"
               className="h-7 w-auto mb-5"
             />
             <p className="text-slate-500 text-sm leading-relaxed max-w-sm mb-5">
@@ -21,10 +25,10 @@ export default function Footer() {
             <div className="flex items-center gap-2 text-sm text-slate-500 mb-2">
               <Mail size={14} className="text-emerald-500/60" />
               <a
-                href="mailto:hello@grantboost.agency"
+                href="mailto:nonprofit@dgtl-house.com"
                 className="hover:text-emerald-400 transition-colors"
               >
-                hello@grantboost.agency
+                nonprofit@dgtl-house.com
               </a>
             </div>
             <div className="flex items-center gap-2 text-sm text-slate-500">
@@ -85,7 +89,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/[0.05] flex flex-wrap items-center justify-between gap-4">
           <p className="text-slate-600 text-xs">
-            © {year} GrantBoost Agency. All rights reserved.
+            © {year} DGTL-House Agency. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-xs text-slate-600">
             <span className="flex items-center gap-1.5">

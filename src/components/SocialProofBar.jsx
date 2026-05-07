@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Award, Star, Lock, CheckCircle } from "lucide-react";
 import { AnimSection, AnimItem, fadeIn } from "../utils/animations";
 
 const clients = [
@@ -21,8 +22,6 @@ export default function SocialProofBar() {
 
   return (
     <section className="relative py-12 bg-[#f0eee6] border-y border-[#ebe9e0] overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-[#f0eee6] via-transparent to-[#f0eee6] z-10 pointer-events-none" />
-
       <AnimSection>
         <AnimItem variant={fadeIn}>
           <p className="text-center text-slate-500 text-xs font-semibold tracking-[0.2em] uppercase mb-8">
@@ -49,25 +48,25 @@ export default function SocialProofBar() {
       <div className="mt-10 flex flex-wrap items-center justify-center gap-4 sm:gap-8 px-4 relative z-20">
         {[
           {
-            icon: "🏅",
+            icon: <Award size={24} className="text-yellow-400" />,
             title: "Google Ad Grants",
             sub: "Certified Partner",
             color: "from-emerald-500/15 to-emerald-700/5 border-emerald-500/20",
           },
           {
-            icon: "⭐",
+            icon: <Star size={24} className="text-yellow-400 " />,
             title: "4.9 / 5.0",
             sub: "Average client rating",
             color: "from-yellow-400/15 to-yellow-600/5 border-yellow-400/20",
           },
           {
-            icon: "🔒",
+            icon: <Lock size={24} className="text-yellow-400" />,
             title: "BBB Accredited",
             sub: "A+ Rating",
             color: "from-blue-500/15 to-blue-700/5 border-blue-500/20",
           },
           {
-            icon: "✅",
+            icon: <CheckCircle size={24} className="text-yellow-400" />,
             title: "99% Approval Rate",
             sub: "For eligible nonprofits",
             color: "from-emerald-500/15 to-emerald-700/5 border-emerald-500/20",
@@ -81,7 +80,7 @@ export default function SocialProofBar() {
             viewport={{ once: true }}
             className={`flex items-center gap-3 px-5 py-3 rounded-xl bg-gradient-to-br ${badge.color} border`}
           >
-            <span className="text-2xl">{badge.icon}</span>
+            {badge.icon}
             <div>
               <div className="text-white font-bold text-sm leading-tight">
                 {badge.title}
@@ -90,6 +89,20 @@ export default function SocialProofBar() {
             </div>
           </motion.div>
         ))}
+      </div>
+
+      {/* CTA Button */}
+      <div className="mt-8 flex justify-center">
+        <button
+          onClick={() =>
+            document
+              .querySelector("#credibility")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="btn-secondary text-base !py-3 !px-6"
+        >
+          View Case Studies
+        </button>
       </div>
     </section>
   );

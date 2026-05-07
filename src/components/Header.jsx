@@ -45,7 +45,11 @@ export default function Header() {
         >
           <img
             src="/nonprofit-logo.svg"
-            alt="GrantBoost"
+            alt="DGTL-House"
+            width="160"
+            height="32"
+            fetchpriority="high"
+            decoding="async"
             className="h-8 w-auto group-hover:opacity-90 transition-opacity duration-300"
           />
         </a>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Star, Quote, MapPin, Mail } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 import {
   AnimSection,
   AnimItem,
@@ -10,42 +10,39 @@ import {
 const testimonials = [
   {
     name: "Sarah Johnson",
-    role: "Executive Director, Shelter First",
-    niche: "Homeless Services",
+    role: "Executive Director",
+    company: "Shelter First",
     avatar: "SJ",
     photo:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=faces&auto=format",
     color: "from-emerald-500 to-emerald-700",
+    rating: 5,
     quote:
-      "Before GrantBoost, we spent $1,200/month on Google ads with mediocre results. Now we're at the top of search for every relevant keyword in our city — and paying nothing. Our donation page visits went up 340% in 3 months.",
-    stats: { label: "Traffic increase", value: "+340%" },
-    contact: "sarah@shelterfirst.org",
+      "Before DGTL-House, we spent $1,200/month on Google ads with mediocre results. Now we're at the top of search for every relevant keyword in our city — and paying nothing. Our donation page visits went up 340% in 3 months.",
   },
   {
     name: "Marcus Williams",
-    role: "Development Director, City Food Bank",
-    niche: "Food Security",
+    role: "Development Director",
+    company: "City Food Bank",
     avatar: "MW",
     photo:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=faces&auto=format",
     color: "from-blue-500 to-blue-700",
+    rating: 5,
     quote:
-      "We'd applied for Google Ad Grants ourselves and got rejected twice. GrantBoost handled everything — and we were approved in 12 days. Three months in, we've added over 80 new regular donors. ROI is insane.",
-    stats: { label: "New donors in 90 days", value: "80+" },
-    contact: "mwilliams@cityfoodbank.org",
+      "We'd applied for Google Ad Grants ourselves and got rejected twice. DGTL-House handled everything — and we were approved in 12 days. Three months in, we've added over 80 new regular donors.",
   },
   {
     name: "Dr. Elena Reyes",
-    role: "CEO, Mental Health Matters",
-    niche: "Mental Health",
+    role: "CEO",
+    company: "Mental Health Matters",
     avatar: "ER",
     photo:
       "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=faces&auto=format",
     color: "from-purple-500 to-purple-700",
+    rating: 4.5,
     quote:
-      "Our cause is urgent but we had zero online presence. GrantBoost built our website, got the grant, and launched campaigns — all in one month. We now get 200+ calls per month from people who found us via Google.",
-    stats: { label: "Monthly inquiries", value: "200+" },
-    contact: "elena@mentalhealthmatters.org",
+      "Our cause is urgent but we had zero online presence. DGTL-House built our website, got the grant, and launched campaigns — all in one month. We now get 200+ calls per month from people who found us via Google.",
   },
 ];
 
@@ -92,6 +89,10 @@ const team = [
 ];
 
 export default function Credibility() {
+  const scrollToEligibility = () => {
+    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section
       id="credibility"
@@ -102,25 +103,36 @@ export default function Credibility() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <AnimSection>
           <AnimItem variant={fadeUp}>
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent to-yellow-500/50" />
-              <span className="text-yellow-400 text-xs font-bold tracking-[0.2em] uppercase">
-                Social Proof
-              </span>
-              <div className="h-px w-12 bg-gradient-to-l from-transparent to-yellow-500/50" />
-            </div>
-          </AnimItem>
-
-          <AnimItem variant={fadeUp}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white text-center max-w-3xl mx-auto leading-tight mb-4">
               We've Done This Before.{" "}
               <span className="gradient-text-gold">Here's the Proof.</span>
             </h2>
             <p className="text-slate-400 text-center mb-16 max-w-xl mx-auto">
-              Real results from real nonprofits. You can contact them directly.
+              Real results from real nonprofits.
             </p>
           </AnimItem>
         </AnimSection>
+
+        {/* Clutch badge */}
+        <div className="flex justify-center mb-10">
+          <a
+            href="https://clutch.co"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:border-white/20 transition-colors group"
+          >
+            <img
+              src="/icons/poweredCluch.png"
+              alt="Clutch"
+              width="200"
+              className="opacity-80 group-hover:opacity-100 transition-opacity"
+              onError={(e) => {
+                e.target.style.display = "none";
+                e.target.nextSibling.style.display = "inline";
+              }}
+            />
+          </a>
+        </div>
 
         {/* Testimonials */}
         <motion.div
@@ -134,76 +146,86 @@ export default function Credibility() {
             <motion.div
               key={i}
               variants={fadeUp}
-              className="testimonial-card p-7 flex flex-col gap-5 group"
+              className="testimonial-card p-6 flex flex-col gap-4"
             >
-              {/* Stars */}
-              <div className="flex gap-1">
-                {[...Array(5)].map((_, s) => (
-                  <Star
-                    key={s}
-                    size={14}
-                    className="text-yellow-400 fill-current"
-                  />
-                ))}
+              {/* Author at top */}
+              <div className="flex items-center gap-3">
+                <img
+                  src={t.photo}
+                  alt={t.name}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-12 h-12 rounded-full object-cover flex-shrink-0 ring-2 ring-white/10"
+                  onError={(e) => {
+                    e.target.style.display = "none";
+                    e.target.nextSibling.style.display = "flex";
+                  }}
+                />
+                <div
+                  className={`w-12 h-12 rounded-full bg-gradient-to-br ${t.color} items-center justify-center text-white font-bold text-sm flex-shrink-0 hidden`}
+                >
+                  {t.avatar}
+                </div>
+                <div>
+                  <div className="text-white font-bold text-sm leading-tight">
+                    {t.name}
+                  </div>
+                  <div className="text-slate-400 text-xs mt-0.5">
+                    {t.role}, {t.company}
+                  </div>
+                </div>
+              </div>
+
+              {/* Stars + rating */}
+              <div className="flex items-center justify-between">
+                <div className="flex gap-0.5">
+                  {[1, 2, 3, 4, 5].map((s) => (
+                    <svg
+                      key={s}
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <defs>
+                        <linearGradient id={`star-${i}-${s}`}>
+                          <stop
+                            offset={`${Math.min(100, Math.max(0, (t.rating - s + 1) * 100))}%`}
+                            stopColor="#facc15"
+                          />
+                          <stop
+                            offset={`${Math.min(100, Math.max(0, (t.rating - s + 1) * 100))}%`}
+                            stopColor="#374151"
+                          />
+                        </linearGradient>
+                      </defs>
+                      <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                        fill={`url(#star-${i}-${s})`}
+                      />
+                    </svg>
+                  ))}
+                </div>
+                <span className="text-slate-300 text-sm font-semibold">
+                  {t.rating.toFixed(1)}
+                </span>
               </div>
 
               {/* Quote */}
-              <div className="relative">
-                <Quote
-                  size={28}
-                  className="text-emerald-500/30 absolute -top-1 -left-1"
-                />
-                <p className="text-slate-300 text-sm leading-relaxed pl-6">
-                  {t.quote}
-                </p>
-              </div>
-
-              {/* Stat highlight */}
-              <div className="rounded-xl bg-emerald-500/10 border border-emerald-500/15 px-4 py-3 text-center">
-                <div className="text-2xl font-black gradient-text">
-                  {t.stats.value}
-                </div>
-                <div className="text-slate-400 text-xs">{t.stats.label}</div>
-              </div>
-
-              {/* Author */}
-              <div className="mt-auto pt-4 border-t border-white/[0.06]">
-                <div className="flex items-center gap-3 mb-2">
-                  <img
-                    src={t.photo}
-                    alt={t.name}
-                    className="w-10 h-10 rounded-full object-cover flex-shrink-0 ring-2 ring-white/10"
-                    onError={(e) => {
-                      e.target.style.display = "none";
-                      e.target.nextSibling.style.display = "flex";
-                    }}
-                  />
-                  <div
-                    className={`w-10 h-10 rounded-full bg-gradient-to-br ${t.color} items-center justify-center text-white font-bold text-sm flex-shrink-0 hidden`}
-                  >
-                    {t.avatar}
-                  </div>
-                  <div>
-                    <div className="text-white font-bold text-sm">{t.name}</div>
-                    <div className="text-slate-500 text-xs">{t.role}</div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 text-xs text-slate-500">
-                  <span className="px-2 py-0.5 rounded-full bg-white/[0.04] border border-white/[0.06]">
-                    {t.niche}
-                  </span>
-                </div>
-                <div className="flex items-center gap-1 mt-2">
-                  <Mail size={11} className="text-emerald-500/60" />
-                  <span className="text-emerald-400/70 text-xs hover:text-emerald-400 transition-colors cursor-pointer">
-                    {t.contact}
-                  </span>
-                </div>
-              </div>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                &ldquo;{t.quote}&rdquo;
+              </p>
             </motion.div>
           ))}
         </motion.div>
-
+        <div className="mt-12 mb-16 flex justify-center">
+          <button
+            onClick={scrollToEligibility}
+            className="btn-primary text-lg !py-4 !px-8"
+          >
+            Check My Eligibility →
+          </button>
+        </div>
         {/* Niches */}
         <AnimSection>
           <AnimItem variant={fadeUp}>
@@ -251,6 +273,8 @@ export default function Credibility() {
                       <img
                         src={m.photo}
                         alt={m.name}
+                        loading="lazy"
+                        decoding="async"
                         className="w-16 h-16 rounded-2xl object-cover ring-2 ring-emerald-500/30"
                         onError={(e) => {
                           e.target.style.display = "none";
