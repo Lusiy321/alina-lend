@@ -49,6 +49,7 @@ const testimonials = [
 const niches = [
   "Food Security",
   "Animal Welfare",
+  "+ Whatever your mission is",
   "Education",
   "Mental Health",
   "Homeless Services",
@@ -244,7 +245,8 @@ export default function Credibility() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: i * 0.05 }}
                     viewport={{ once: true }}
-                    className="px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/15 text-slate-400 text-sm font-medium hover:bg-emerald-500/20 transition-colors cursor-default"
+                    className={`px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/15 text-sm font-medium hover:bg-emerald-500/20 transition-colors cursor-default ${i === 2 ? "font-bold" : "text-slate-400"}`}
+                    style={i === 2 ? { color: "#c4ed82" } : {}}
                   >
                     {n}
                   </motion.span>
