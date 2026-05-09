@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { AnimSection, AnimItem, fadeUp } from "../utils/animations";
 
 const steps = [
@@ -56,16 +56,6 @@ export default function HowItWorks() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <AnimSection>
-          <AnimItem variant={fadeUp}>
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent to-blue-500/50" />
-              <span className="text-blue-400 text-xs font-bold tracking-[0.2em] uppercase">
-                The Process
-              </span>
-              <div className="h-px w-12 bg-gradient-to-l from-transparent to-blue-500/50" />
-            </div>
-          </AnimItem>
-
           <AnimItem variant={fadeUp}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white text-center max-w-3xl mx-auto leading-tight mb-4">
               From "I'm Interested" to{" "}
@@ -155,7 +145,19 @@ export default function HowItWorks() {
           </AnimItem>
         </AnimSection>
       </div>
-
+      <div className="flex justify-center mt-10">
+        <button
+          onClick={() =>
+            document
+              .querySelector("#contact")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="btn-primary text-base !py-4 !px-8"
+        >
+          Check My Eligibility →
+          <ChevronRight size={18} />
+        </button>
+      </div>
       <div className="section-divider mx-auto max-w-6xl mt-16" />
     </section>
   );

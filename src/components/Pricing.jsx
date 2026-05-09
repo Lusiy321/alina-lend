@@ -27,18 +27,8 @@ export default function Pricing() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <AnimSection>
           <AnimItem variant={fadeUp}>
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent to-emerald-500/50" />
-              <span className="text-emerald-400 text-xs font-bold tracking-[0.2em] uppercase">
-                Investment
-              </span>
-              <div className="h-px w-12 bg-gradient-to-l from-transparent to-emerald-500/50" />
-            </div>
-          </AnimItem>
-
-          <AnimItem variant={fadeUp}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white text-center max-w-3xl mx-auto leading-tight mb-4">
-              Simple, Transparent Pricing.
+              COMPLETE MANAGEMENT PLAN
             </h2>
             <p className="text-slate-400 text-center max-w-2xl mx-auto mb-14">
               We'll match any legitimate competitor's price — because we
@@ -70,16 +60,20 @@ export default function Pricing() {
                     <h3 className="text-white text-2xl font-black">
                       Full Google Ad Grants Service
                     </h3>
+                    <p className="text-slate-300 text-sm mt-2 max-w-xs">
+                      Most agencies charge $1,000+/mo for this. This month only
+                      — just $250/mo.
+                    </p>
                   </div>
                   <div className="text-right">
                     <div className="text-white/70 text-sm line-through mb-0.5">
-                      $997/mo
+                      $1,250/mo
                     </div>
                     <div className="text-white font-black text-4xl leading-none">
-                      $597<span className="text-lg font-semibold">/mo</span>
+                      $250<span className="text-lg font-semibold">/mo</span>
                     </div>
                     <div className="text-emerald-200 text-xs mt-1">
-                      after free first month
+                      after free grant setup
                     </div>
                   </div>
                 </div>

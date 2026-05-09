@@ -38,14 +38,12 @@ export default function Guarantee() {
                 </div>
 
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
-                  We Guarantee Grant Approval.{" "}
-                  <span className="gradient-text">Period.</span>
+                  Grant First. Payment After.
                 </h2>
 
                 <p className="text-slate-300 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-                  If your nonprofit is eligible and we don't get you approved
-                  for Google Ad Grants — we keep working at no charge until
-                  you're in.
+                  We secure your Google Ad Grant at no cost — you only pay once
+                  we're managing your live campaigns.
                 </p>
 
                 {/* Guarantee details */}
@@ -53,18 +51,18 @@ export default function Guarantee() {
                   {[
                     {
                       img: "/guarantee/no-fine-print.jpg",
-                      title: "No fine print",
-                      desc: "The guarantee is exactly what it says. No exceptions, no asterisks.",
+                      title: "Grant approval — guaranteed",
+                      desc: "We handle the entire application process and guarantee approval for every eligible nonprofit.",
                     },
                     {
                       img: "/guarantee/we-keep-working.jpg",
-                      title: "We keep working",
-                      desc: "If we don't get you approved, we continue at absolutely no charge until we do.",
+                      title: "Zero upfront cost",
+                      desc: "No fees until your grant is live and your ads are running. We prove the result first.",
                     },
                     {
                       img: "/guarantee/first-month-free.jpg",
-                      title: "First month free",
-                      desc: "We only charge once your grant is live and campaigns are running.",
+                      title: "Then we grow it",
+                      desc: "Once approved, we manage and optimize your campaigns to bring in real donors and volunteers.",
                     },
                   ].map((item, i) => (
                     <motion.div
@@ -95,8 +93,8 @@ export default function Guarantee() {
                 </div>
 
                 <p className="text-slate-400 text-sm italic mb-8">
-                  "We've never failed to get an eligible nonprofit approved. But
-                  if we do — you pay nothing until it's done."
+                  "We get you the grant first — then you decide if you want us
+                  to grow it."
                 </p>
 
                 <button
@@ -107,7 +105,7 @@ export default function Guarantee() {
                   }
                   className="btn-primary text-base !py-4 !px-8 mx-auto"
                 >
-                  Claim My Free Month
+                  Claim My Free Period →
                   <ChevronRight size={18} />
                 </button>
               </div>

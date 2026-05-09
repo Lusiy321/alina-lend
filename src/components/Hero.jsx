@@ -174,19 +174,19 @@ export default function Hero() {
             <div className="flex flex-wrap items-center justify-center gap-6 mb-14">
               <div className="flex items-center gap-2">
                 <span className="text-emerald-400 font-bold text-lg">✓</span>
-                <span className="text-[#c4ed82] text-base font-bold">
+                <span className="text-emerald-400 text-base font-bold">
                   First month free
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-emerald-400 font-bold text-lg">✓</span>
-                <span className="text-[#c4ed82] text-base font-bold">
+                <span className="text-emerald-400 text-base font-bold">
                   Fully done-for-you
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-emerald-400 font-bold text-lg">✓</span>
-                <span className="text-[#c4ed82] text-base font-bold">
+                <span className="text-emerald-400 text-base font-bold">
                   Cancel anytime
                 </span>
               </div>

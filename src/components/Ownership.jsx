@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Key, Shield, LogOut, X } from "lucide-react";
+import { Key, Shield, LogOut, X, ChevronRight } from "lucide-react";
 import { AnimSection, AnimItem, fadeUp } from "../utils/animations";
 
 const points = [
@@ -125,8 +125,21 @@ export default function Ownership() {
             </motion.div>
           </div>
         </AnimSection>
-      </div>
 
+        <div className="flex justify-center mt-10">
+          <button
+            onClick={() =>
+              document
+                .querySelector("#contact")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+            className="btn-primary text-base !py-4 !px-8"
+          >
+            Check My Eligibility →
+            <ChevronRight size={18} />
+          </button>
+        </div>
+      </div>
       <div className="section-divider mx-auto max-w-6xl mt-16" />
     </section>
   );
