@@ -1,22 +1,15 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  ChevronRight,
-  CheckCircle,
-  AlertCircle,
-  Send,
-  Loader,
-} from "lucide-react";
+import { ChevronRight, CheckCircle, Loader } from "lucide-react";
 import { AnimSection, AnimItem, fadeUp, scaleIn } from "../utils/animations";
 
 const guarantees = [
   "Grant approval guaranteed",
   "First month free — pay only after launch",
-  "No contract, cancel anytime",
+  "Cancel anytime",
   "Your account stays yours, always",
-  "No website? We'll build one.",
+  "No website? We'll build one",
 ];
-
 function ContactForm() {
   const [form, setForm] = useState({
     name: "",
@@ -182,21 +175,10 @@ export default function FinalCTA() {
 
             <AnimItem variant={fadeUp}>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-6">
-                Every Month Without Google Ad Grants Is{" "}
-                <span className="gradient-text">
-                  $10,000 in Free Advertising
-                </span>{" "}
-                You Don't Get Back.
+                While you're thinking, other nonprofits are already getting
+                donors{" "}
+                <span className="gradient-text">— with zero ad budget.</span>
               </h2>
-            </AnimItem>
-
-            <AnimItem variant={fadeUp}>
-              <p className="text-slate-300 text-lg mb-8 leading-relaxed">
-                We have limited spots available for new clients this month.
-                Check your eligibility now — it takes 15 minutes and costs you
-                nothing. We'll tell you exactly whether you qualify, what
-                results are realistic, and what the next step looks like.
-              </p>
             </AnimItem>
 
             {/* All guarantees */}
@@ -264,6 +246,8 @@ export default function FinalCTA() {
             </AnimItem>
           </AnimSection>
 
+          {/* <Pricing /> */}
+
           {/* Right: form */}
           <AnimSection>
             <AnimItem variant={scaleIn}>
@@ -274,7 +258,7 @@ export default function FinalCTA() {
                     Check My Eligibility
                   </h3>
                   <p className="text-slate-400 text-sm mb-7">
-                    Free. 15 minutes. No obligation.
+                    Free. 30 minutes. No obligation.
                   </p>
                   <ContactForm />
                 </div>

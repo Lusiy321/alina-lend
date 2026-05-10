@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { CheckCircle, ChevronRight, AlertCircle, Zap } from "lucide-react";
+import { CheckCircle, Zap } from "lucide-react";
 import { AnimSection, AnimItem, fadeUp, scaleIn } from "../utils/animations";
 
 const included = [
@@ -17,7 +17,30 @@ const included = [
 ];
 
 export default function Pricing() {
-  const [spotsLeft] = useState(4);
+  const [spotsLeft, setSpotsLeft] = useState(4);
+  const [timeLeft, setTimeLeft] = useState(10783); // 2:59:43
+
+  useEffect(() => {
+    const spotsTimeout = setTimeout(() => {
+      setSpotsLeft(3);
+    }, 5000);
+
+    const timerInterval = setInterval(() => {
+      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+
+    return () => {
+      clearTimeout(spotsTimeout);
+      clearInterval(timerInterval);
+    };
+  }, []);
+
+  const formatTime = (seconds) => {
+    const h = Math.floor(seconds / 3600);
+    const m = Math.floor((seconds % 3600) / 60);
+    const s = seconds % 60;
+    return `${h}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+  };
 
   return (
     <section id="pricing" className="relative py-24 sm:py-32 overflow-hidden">
@@ -100,31 +123,17 @@ export default function Pricing() {
                   ))}
                 </div>
 
-                {/* First month free highlight */}
-                <div className="rounded-2xl p-5 bg-gradient-to-r from-yellow-400/10 to-yellow-600/5 border border-yellow-400/20 mb-6 text-center">
+                {/* Grant setup free highlight */}
+                <div className="rounded-2xl p-5 bg-gradient-to-r from-emerald-400/10 to-emerald-600/5 border border-emerald-400/20 text-center">
                   <div className="text-3xl mb-2">🎁</div>
-                  <div className="text-red-400 font-black text-xl mb-1">
-                    FIRST MONTH FREE
+                  <div className="text-emerald-400 font-black text-xl mb-1">
+                    GRANT SETUP — 100% FREE
                   </div>
                   <p className="text-slate-300 text-sm">
-                    We only charge once your grant is live and your campaigns
-                    are actively running. Zero risk to you.
+                    We secure your Google Ad Grant at no cost. You only pay once
+                    it's live.
                   </p>
                 </div>
-
-                <button
-                  onClick={() =>
-                    document
-                      .querySelector("#contact")
-                      ?.scrollIntoView({ behavior: "smooth" })
-                  }
-                  className="btn-primary w-full justify-center text-lg !py-4 !px-8 mb-3"
-                >
-                  Start My Free Month →
-                </button>
-                <p className="text-center text-slate-500 text-xs">
-                  No credit card required · Cancel anytime · 30-day notice
-                </p>
               </div>
             </div>
           </AnimItem>
@@ -162,41 +171,52 @@ export default function Pricing() {
           {/* Urgency block */}
           <AnimItem variant={fadeUp}>
             <div className="urgency-box p-6 sm:p-8">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-yellow-400/15 flex items-center justify-center flex-shrink-0">
-                  <AlertCircle size={20} className="text-black-400" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-red-400 font-bold text-lg mb-2">
-                    ⚠️ Limited Spots Available
-                  </h3>
-                  <p className="text-slate-300 text-sm leading-relaxed mb-4">
-                    Our team manages each account hands-on — which means we
-                    can't take on unlimited clients without compromising
-                    quality. We currently have limited spots open for new
-                    nonprofits. Every month without the grant is $10,000 in free
-                    advertising you don't get back.
-                  </p>
-                  <div className="flex items-center justify-between flex-wrap gap-3">
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-red-400 pulse-green" />
-                      <span className="text-red-400 font-bold text-sm">
-                        {spotsLeft} spots remaining this month
-                      </span>
-                    </div>
-                    <button
-                      onClick={() =>
-                        document
-                          .querySelector("#contact")
-                          ?.scrollIntoView({ behavior: "smooth" })
-                      }
-                      className="btn-primary text-sm !py-2.5 !px-5"
-                    >
-                      Secure My Spot <ChevronRight size={14} />
-                    </button>
-                  </div>
-                </div>
+              <h3 className="text-red-400 font-bold text-lg mb-3">
+                ⚠️ Limited Spots Available
+              </h3>
+              <p className="text-slate-300 text-sm leading-relaxed mb-5">
+                We currently have limited spots open for new nonprofits. Every
+                month without the grant is $10,000 in free advertising you don't
+                get back.
+              </p>
+
+              <div className="flex items-center gap-2 mb-3">
+                <motion.span
+                  key={spotsLeft}
+                  initial={{ opacity: 0, y: -8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="text-red-400 font-black text-xl"
+                >
+                  🔴 {spotsLeft}
+                </motion.span>
+                <span className="text-red-400 font-bold text-sm">
+                  spots remaining this month
+                </span>
               </div>
+
+              <div className="flex items-center gap-2 mb-6">
+                <span className="text-slate-400 font-bold text-sm">
+                  ⏱️ Offer expires in{" "}
+                  <span className="font-mono text-white text-base">
+                    {formatTime(timeLeft)}
+                  </span>
+                </span>
+              </div>
+
+              <button
+                onClick={() =>
+                  document
+                    .querySelector("#contact")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="btn-primary w-full justify-center text-lg !py-4 !px-8 mb-3"
+              >
+                → Start My Free Month
+              </button>
+              <p className="text-center text-slate-500 text-xs">
+                No credit card required · Cancel anytime · 30-day notice
+              </p>
             </div>
           </AnimItem>
         </AnimSection>

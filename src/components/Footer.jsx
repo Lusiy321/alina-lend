@@ -6,9 +6,9 @@ export default function Footer() {
   return (
     <footer className="bg-[#ebe9e0] border-t border-[#dbdbd8] py-14">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {/* Brand */}
-          <div className="lg:col-span-2">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-8 mb-12">
+          {/* Brand & Description */}
+          <div className="flex-1">
             <img
               src="/nonprofit-logo.svg"
               alt="DGTL-House"
@@ -22,7 +22,11 @@ export default function Footer() {
               Helping nonprofits access and maximize Google Ad Grants since
               2018. Certified partner. 200+ organizations helped.
             </p>
-            <div className="flex items-center gap-2 text-sm text-slate-500 mb-2">
+          </div>
+
+          {/* Contacts */}
+          <div className="flex flex-col gap-3 lg:text-right">
+            <div className="flex items-center gap-2 text-sm text-slate-500 lg:flex-row-reverse lg:justify-end">
               <Mail size={14} className="text-emerald-500/60" />
               <a
                 href="mailto:nonprofit@dgtl-house.com"
@@ -31,58 +35,10 @@ export default function Footer() {
                 nonprofit@dgtl-house.com
               </a>
             </div>
-            <div className="flex items-center gap-2 text-sm text-slate-500">
+            <div className="flex items-center gap-2 text-sm text-slate-500 lg:flex-row-reverse lg:justify-end">
               <MapPin size={14} className="text-emerald-500/60" />
               <span>United States · Remote Team</span>
             </div>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-white font-bold text-sm mb-4 tracking-wide">
-              Services
-            </h4>
-            <ul className="space-y-2.5 text-slate-500 text-sm">
-              {[
-                "Grant Application",
-                "Account Management",
-                "Campaign Optimization",
-                "Website Build",
-                "Compliance Monitoring",
-                "Monthly Reporting",
-              ].map((s) => (
-                <li
-                  key={s}
-                  className="hover:text-slate-300 transition-colors cursor-default"
-                >
-                  {s}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="text-white font-bold text-sm mb-4 tracking-wide">
-              Company
-            </h4>
-            <ul className="space-y-2.5 text-slate-500 text-sm">
-              {[
-                "About Us",
-                "Case Studies",
-                "Blog",
-                "FAQ",
-                "Privacy Policy",
-                "Terms of Service",
-              ].map((s) => (
-                <li
-                  key={s}
-                  className="hover:text-slate-300 transition-colors cursor-pointer"
-                >
-                  {s}
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
 
@@ -93,7 +49,6 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-4 text-xs text-slate-600">
             <span className="flex items-center gap-1.5">
-              <span>🏅</span>
               Google Ad Grants Certified Partner
             </span>
             <span className="text-slate-700">·</span>

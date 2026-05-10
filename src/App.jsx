@@ -35,8 +35,8 @@ export default function App() {
           <Solution />
           <HowItWorks />
           <Pricing />
-          <FAQ />
           <FinalCTA />
+          <FAQ />
         </Suspense>
       </main>
       <Suspense fallback={null}>

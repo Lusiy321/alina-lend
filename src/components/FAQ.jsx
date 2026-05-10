@@ -117,16 +117,6 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <AnimSection>
           <AnimItem variant={fadeUp}>
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent to-slate-500/50" />
-              <span className="text-slate-400 text-xs font-bold tracking-[0.2em] uppercase">
-                FAQ
-              </span>
-              <div className="h-px w-12 bg-gradient-to-l from-transparent to-slate-500/50" />
-            </div>
-          </AnimItem>
-
-          <AnimItem variant={fadeUp}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white text-center max-w-3xl mx-auto leading-tight mb-4">
               Every Question. Answered.
             </h2>
