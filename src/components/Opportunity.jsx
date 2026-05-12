@@ -12,12 +12,9 @@ import {
 import { useCounter } from "../hooks/useCounter";
 
 const searchQueries = [
-  '"food bank near me"',
-  '"how to help homeless families"',
-  '"volunteer opportunities in Chicago"',
+  '"volunteer opportunities"',
+  '"mental health nonprofit"',
   '"donate to animal shelter"',
-  '"mental health support nonprofit"',
-  '"veterans assistance programs"',
 ];
 
 function CounterStat({ end, prefix = "", suffix = "", label, decimals = 0 }) {
@@ -43,19 +40,32 @@ function PhoneMockup() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
   const queries = [
-    "food bank near me",
-    "volunteer opportunities",
-    "donate to animal shelter",
-    "mental health nonprofit",
+    {
+      text: "volunteer opportunities",
+      title: "Find Volunteer Opportunities Near You",
+      desc1: "Join 500+ volunteers making a difference.",
+      desc2: "Sign up today — no experience needed.",
+    },
+    {
+      text: "mental health nonprofit",
+      title: "Mental Health Support & Resources",
+      desc1: "Free counseling, peer support & workshops.",
+      desc2: "Helping 2,000+ people in your community.",
+    },
+    {
+      text: "donate to animal shelter",
+      title: "Donate to Your Local Animal Shelter",
+      desc1: "Every dollar feeds & shelters animals in need.",
+      desc2: "100% goes directly to the animals.",
+    },
   ];
 
   useEffect(() => {
     if (!inView) return;
-    const current = queries[queryIndex];
+    const current = queries[queryIndex].text;
     let timeout;
 
     if (!isDeleting && typedText === current) {
-      // Fully typed — show ad/results, pause, then start deleting
       setShowAd(true);
       setTimeout(() => setShowResults(true), 450);
       timeout = setTimeout(() => {
@@ -64,12 +74,10 @@ function PhoneMockup() {
         setIsDeleting(true);
       }, 2400);
     } else if (isDeleting && typedText === "") {
-      // Fully deleted — move to next query
       setIsDeleting(false);
       setQueryIndex((i) => (i + 1) % queries.length);
       timeout = setTimeout(() => {}, 300);
     } else {
-      // Typing or deleting one character
       timeout = setTimeout(
         () => {
           setTypedText((t) =>
@@ -82,6 +90,8 @@ function PhoneMockup() {
 
     return () => clearTimeout(timeout);
   }, [inView, typedText, isDeleting, queryIndex]);
+
+  const currentAd = queries[queryIndex];
 
   return (
     <div ref={ref} className="relative mx-auto w-[260px] sm:w-[300px]">
@@ -157,11 +167,12 @@ function PhoneMockup() {
                 </span>
               </div>
               <p className="text-[#1558D6] text-[12px] font-semibold leading-snug mb-1">
-                City Food Bank — Help Fight Hunger
+                {currentAd.title}
               </p>
               <p className="text-gray-500 text-[10px] leading-relaxed">
-                Donate food or volunteer today. Serving 10,000+ families
-                monthly.
+                {currentAd.desc1}
+                <br />
+                {currentAd.desc2}
               </p>
             </motion.div>
             {/* Skeleton organic results */}
@@ -203,10 +214,15 @@ function PhoneMockup() {
 }
 
 export default function Opportunity() {
+  const scrollToEligibility = () => {
+    document
+      .querySelector("#contact-form")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <section
       id="opportunity"
-      className="relative pb-24 sm:pb-32 overflow-hidden"
+      className="relative pb-24 sm:pb-32 overflow-hidden scroll-mt-[88px]"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <AnimSection>
@@ -228,6 +244,14 @@ export default function Opportunity() {
               appearing at the top of Google results every time someone searches
               for what you do.
             </p>
+            <div className="flex justify-center mb-8">
+              <button
+                onClick={scrollToEligibility}
+                className="btn-primary text-lg !py-4 !px-8"
+              >
+                Check My Eligibility →
+              </button>
+            </div>
           </AnimItem>
         </AnimSection>
 
@@ -364,6 +388,14 @@ export default function Opportunity() {
               </div>
             </div>
           </AnimItem>
+          <div className="flex justify-center mb-8 mt-8">
+            <button
+              onClick={scrollToEligibility}
+              className="btn-primary text-lg !py-4 !px-8"
+            >
+              Check My Eligibility →
+            </button>
+          </div>
         </AnimSection>
 
         {/* Phone mockup demo */}
@@ -390,12 +422,12 @@ export default function Opportunity() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="mt-10"
+            className="mt-10 flex justify-center mb-8"
           >
             <button
               onClick={() =>
                 document
-                  .querySelector("#contact")
+                  .querySelector("#contact-form")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
               className="btn-primary text-lg !py-4 !px-8"

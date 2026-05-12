@@ -23,7 +23,7 @@ const services = [
 
 export default function Solution() {
   return (
-    <section className="relative py-24 sm:py-32 overflow-hidden">
+    <section className="relative py-14 sm:py-32 overflow-hidden">
       <div className="absolute top-1/2 left-0 w-[600px] h-[400px] bg-emerald-500/6 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -153,7 +153,7 @@ export default function Solution() {
         <button
           onClick={() =>
             document
-              .querySelector("#contact")
+              .querySelector("#contact-form")
               ?.scrollIntoView({ behavior: "smooth" })
           }
           className="btn-primary text-base !py-4 !px-8"
@@ -162,7 +162,7 @@ export default function Solution() {
           <ChevronRight size={18} />
         </button>
       </div>
-      <div className="section-divider mx-auto max-w-6xl mt-16" />
+      <div className="section-divider mx-auto max-w-6xl mt-8 sm:mt-16" />
     </section>
   );
 }

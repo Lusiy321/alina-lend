@@ -1,10 +1,17 @@
 import { motion } from "framer-motion";
-import { ShieldCheck, Zap, ChevronRight } from "lucide-react";
+import {
+  ShieldCheck,
+  Zap,
+  ChevronRight,
+  BadgeCheck,
+  DollarSign,
+  Rocket,
+} from "lucide-react";
 import { AnimSection, AnimItem, fadeUp, scaleIn } from "../utils/animations";
 
 export default function Guarantee() {
   return (
-    <section className="relative py-20 sm:py-28 overflow-hidden">
+    <section className="relative py-14 sm:py-28 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/[0.04] to-transparent pointer-events-none" />
       <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
 
@@ -50,17 +57,23 @@ export default function Guarantee() {
                 <div className="grid sm:grid-cols-3 gap-4 mb-10 text-left">
                   {[
                     {
-                      img: "/guarantee/no-fine-print.jpg",
+                      icon: BadgeCheck,
+                      color: "text-emerald-400",
+                      bg: "bg-emerald-500/15",
                       title: "Grant approval — guaranteed",
                       desc: "We handle the entire application process and guarantee approval for every eligible nonprofit.",
                     },
                     {
-                      img: "/guarantee/we-keep-working.jpg",
+                      icon: DollarSign,
+                      color: "text-blue-400",
+                      bg: "bg-blue-500/15",
                       title: "Zero upfront cost",
                       desc: "No fees until your grant is live and your ads are running. We prove the result first.",
                     },
                     {
-                      img: "/guarantee/first-month-free.jpg",
+                      icon: Rocket,
+                      color: "text-blue-400",
+                      bg: "bg-blue-500/15",
                       title: "Then we grow it",
                       desc: "Once approved, we manage and optimize your campaigns to bring in real donors and volunteers.",
                     },
@@ -73,16 +86,14 @@ export default function Guarantee() {
                       viewport={{ once: true }}
                       className="p-5 rounded-xl bg-white/[0.04] border border-white/[0.07] overflow-hidden"
                     >
-                      <div className="w-full h-28 rounded-lg overflow-hidden mb-4">
-                        <img
-                          src={item.img}
-                          alt={item.title}
-                          loading="lazy"
-                          decoding="async"
-                          className="w-full h-full object-cover"
-                        />
+                      <div
+                        className={`w-10 h-10 rounded-xl ${item.bg} flex items-center justify-center mb-3`}
+                      >
+                        <item.icon size={20} className={item.color} />
                       </div>
-                      <div className="text-white font-bold text-sm mb-1.5">
+                      <div
+                        className={`font-bold text-base mb-2.5 ${item.color}`}
+                      >
                         {item.title}
                       </div>
                       <div className="text-slate-400 text-xs leading-relaxed">
@@ -100,7 +111,7 @@ export default function Guarantee() {
                 <button
                   onClick={() =>
                     document
-                      .querySelector("#contact")
+                      .querySelector("#contact-form")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
                   className="btn-primary text-base !py-4 !px-8 mx-auto"
@@ -114,7 +125,7 @@ export default function Guarantee() {
         </AnimSection>
       </div>
 
-      <div className="section-divider mx-auto max-w-6xl mt-16" />
+      <div className="section-divider mx-auto max-w-6xl mt-8 sm:mt-16" />
     </section>
   );
 }

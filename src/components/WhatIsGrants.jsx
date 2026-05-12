@@ -4,7 +4,9 @@ import { Award } from "lucide-react";
 
 export default function WhatIsGrants() {
   const scrollToEligibility = () => {
-    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+    document
+      .querySelector("#contact-form")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
   return (
     <section className="relative py-24 sm:py-32 overflow-hidden bg-[#f0eee6]/70">
@@ -18,7 +20,7 @@ export default function WhatIsGrants() {
               What Is Google Ad Grants?
             </h2>
             <p className="text-slate-400 text-center text-base mb-14 max-w-xl mx-auto">
-              And why your nonprofit should care — explained in plain English.
+              And why your nonprofit should care.
             </p>
           </AnimItem>
         </AnimSection>

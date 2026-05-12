@@ -19,7 +19,11 @@ const included = [
 export default function Pricing() {
   const [spotsLeft, setSpotsLeft] = useState(4);
   const [timeLeft, setTimeLeft] = useState(10783); // 2:59:43
-
+  const scrollToEligibility = () => {
+    document
+      .querySelector("#contact-form")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
   useEffect(() => {
     const spotsTimeout = setTimeout(() => {
       setSpotsLeft(3);
@@ -39,7 +43,7 @@ export default function Pricing() {
     const h = Math.floor(seconds / 3600);
     const m = Math.floor((seconds % 3600) / 60);
     const s = seconds % 60;
-    return `${h}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+    return `${h}:${String(m).padStart(2, "9")}:${String(s).padStart(2, "9")}`;
   };
 
   return (
@@ -77,7 +81,7 @@ export default function Pricing() {
               >
                 <div className="flex items-start justify-between gap-4 flex-wrap">
                   <div>
-                    <div className="text-emerald-200 text-xs font-bold tracking-widest uppercase mb-2">
+                    <div className="text-slate-400 text-xs font-bold tracking-widest uppercase mb-2">
                       Complete Management Plan
                     </div>
                     <h3 className="text-white text-2xl font-black">
@@ -87,6 +91,14 @@ export default function Pricing() {
                       Most agencies charge $1,000+/mo for this. This month only
                       — just $250/mo.
                     </p>
+                    <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-red-500/15 border border-red-400/25">
+                      <span className="text-slate-300 text-xs font-bold">
+                        ⏱️ Offer expires in
+                      </span>
+                      <span className="text-white font-mono text-sm font-black">
+                        {formatTime(timeLeft)}
+                      </span>
+                    </div>
                   </div>
                   <div className="text-right">
                     <div className="text-white/70 text-sm line-through mb-0.5">
@@ -124,7 +136,7 @@ export default function Pricing() {
                 </div>
 
                 {/* Grant setup free highlight */}
-                <div className="rounded-2xl p-5 bg-gradient-to-r from-emerald-400/10 to-emerald-600/5 border border-emerald-400/20 text-center">
+                <div className="rounded-2xl p-5 bg-gradient-to-r from-emerald-400/10 to-emerald-600/5 border border-emerald-400/20 text-center mb-6">
                   <div className="text-3xl mb-2">🎁</div>
                   <div className="text-emerald-400 font-black text-xl mb-1">
                     GRANT SETUP — 100% FREE
@@ -133,6 +145,15 @@ export default function Pricing() {
                     We secure your Google Ad Grant at no cost. You only pay once
                     it's live.
                   </p>
+                </div>
+
+                <div className="flex justify-center mt-8 mb-4">
+                  <button
+                    onClick={scrollToEligibility}
+                    className="btn-primary text-lg !py-4 !px-8"
+                  >
+                    → Start my free period
+                  </button>
                 </div>
               </div>
             </div>
@@ -207,7 +228,7 @@ export default function Pricing() {
               <button
                 onClick={() =>
                   document
-                    .querySelector("#contact")
+                    .querySelector("#contact-form")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
                 className="btn-primary w-full justify-center text-lg !py-4 !px-8 mb-3"

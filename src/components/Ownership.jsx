@@ -40,7 +40,6 @@ export default function Ownership() {
               means complete transparency and zero dependency.
             </p>
           </AnimItem>
-
           <div className="grid sm:grid-cols-2 gap-5">
             {points.map((point, i) => (
               <motion.div
@@ -68,69 +67,13 @@ export default function Ownership() {
               </motion.div>
             ))}
           </div>
-
-          {/* Visual comparison */}
-          <div className="mt-10 grid sm:grid-cols-2 gap-5">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-              viewport={{ once: true }}
-              className="rounded-2xl p-5 bg-red-500/6 border border-red-500/15"
-            >
-              <div className="text-red-400 font-bold text-sm mb-3 flex items-center gap-2">
-                <X size={14} /> Other agencies
-              </div>
-              <div className="space-y-2 text-slate-400 text-sm">
-                {[
-                  "They own the account",
-                  "Data disappears when you leave",
-                  "Long-term contracts",
-                  "Account held hostage",
-                ].map((t, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <X size={12} className="text-red-500/60" />
-                    {t}
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                delay: 0.1,
-                ease: [0.25, 0.1, 0.25, 1],
-              }}
-              viewport={{ once: true }}
-              className="rounded-2xl p-5 bg-emerald-500/8 border border-emerald-500/20"
-            >
-              <div className="text-emerald-400 font-bold text-sm mb-3 flex items-center gap-2">
-                <Shield size={14} /> DGTL-House
-              </div>
-              <div className="space-y-2 text-slate-300 text-sm">
-                {[
-                  "You own the account 100%",
-                  "All data stays with you",
-                  "Cancel anytime, 30 days notice",
-                  "Full transparency, always",
-                ].map((t, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <span className="text-emerald-400">✓</span>
-                    {t}
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
         </AnimSection>
 
         <div className="flex justify-center mt-10">
           <button
             onClick={() =>
               document
-                .querySelector("#contact")
+                .querySelector("#contact-form")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
             className="btn-primary text-base !py-4 !px-8"

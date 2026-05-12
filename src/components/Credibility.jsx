@@ -91,13 +91,15 @@ const team = [
 
 export default function Credibility() {
   const scrollToEligibility = () => {
-    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+    document
+      .querySelector("#contact-form")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section
       id="credibility"
-      className="relative py-24 sm:py-32 overflow-hidden"
+      className="relative py-14 sm:py-32 overflow-hidden"
     >
       <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-purple-500/6 rounded-full blur-[140px] pointer-events-none" />
 
@@ -187,7 +189,7 @@ export default function Credibility() {
                         <linearGradient id={`star-${i}-${s}`}>
                           <stop
                             offset={`${Math.min(100, Math.max(0, (t.rating - s + 1) * 100))}%`}
-                            stopColor="#facc15"
+                            stopColor="#ef4444"
                           />
                           <stop
                             offset={`${Math.min(100, Math.max(0, (t.rating - s + 1) * 100))}%`}

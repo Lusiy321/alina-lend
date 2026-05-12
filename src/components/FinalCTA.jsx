@@ -146,7 +146,7 @@ function ContactForm() {
         )}
       </button>
       <p className="text-center text-slate-500 text-xs">
-        Takes 15 minutes · No pressure · No obligation
+        Takes 30 minutes · No pressure · No obligation
       </p>
     </form>
   );
@@ -251,7 +251,10 @@ export default function FinalCTA() {
           {/* Right: form */}
           <AnimSection>
             <AnimItem variant={scaleIn}>
-              <div className="glass-card rounded-2xl p-7 sm:p-9 border border-emerald-500/15 relative">
+              <div
+                id="contact-form"
+                className="glass-card rounded-2xl p-7 sm:p-9 border border-emerald-500/15 relative scroll-mt-12"
+              >
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/[0.04] to-transparent rounded-2xl pointer-events-none" />
                 <div className="relative z-10">
                   <h3 className="text-white font-black text-2xl mb-1">

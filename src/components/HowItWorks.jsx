@@ -49,7 +49,7 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="relative py-24 sm:py-32 overflow-hidden bg-[#f0eee6]/60"
+      className="relative py-14 sm:py-32 overflow-hidden bg-[#f0eee6]/60"
     >
       <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
       <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-blue-500/6 rounded-full blur-[140px] pointer-events-none" />
@@ -149,7 +149,7 @@ export default function HowItWorks() {
         <button
           onClick={() =>
             document
-              .querySelector("#contact")
+              .querySelector("#contact-form")
               ?.scrollIntoView({ behavior: "smooth" })
           }
           className="btn-primary text-base !py-4 !px-8"

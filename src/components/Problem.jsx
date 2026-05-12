@@ -13,11 +13,11 @@ const pains = [
     title: "Donations are unpredictable",
     desc: "You rely on the same donors year after year — and one bad quarter can threaten everything.",
   },
-  {
-    icon: <AlertTriangle size={22} className="text-orange-400" />,
-    title: "You can't grow your programs",
-    desc: "You can't consistently bring in new supporters, volunteers, or funding to expand your impact.",
-  },
+  // {
+  //   icon: <AlertTriangle size={22} className="text-orange-400" />,
+  //   title: "You can't grow your programs",
+  //   desc: "You can't consistently bring in new supporters, volunteers, or funding to expand your impact.",
+  // },
   {
     icon: <Users size={22} className="text-red-400" />,
     title: "Your team is stretched thin",
@@ -28,11 +28,11 @@ const pains = [
     title: "They're finding others, not you",
     desc: "People are searching for exactly what you do — but they're finding other organizations, not yours.",
   },
-  {
-    icon: <AlertTriangle size={22} className="text-red-400" />,
-    title: "Online visibility feels impossible",
-    desc: "Ads cost money, SEO takes forever, and social media feels like shouting into the void.",
-  },
+  // {
+  //   icon: <AlertTriangle size={22} className="text-red-400" />,
+  //   title: "Online visibility feels impossible",
+  //   desc: "Ads cost money, SEO takes forever, and social media feels like shouting into the void.",
+  // },
 ];
 
 export default function Problem() {
