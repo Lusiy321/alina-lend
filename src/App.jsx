@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import SocialProofBar from "./components/SocialProofBar";
+import ContactFormCard from "./components/ContactFormCard";
 
 // Below-the-fold components are loaded on demand to shrink the initial JS bundle.
 const Problem = lazy(() => import("./components/Problem"));
@@ -34,8 +35,9 @@ export default function App() {
           <Ownership />
           <Solution />
           <HowItWorks />
-          <Pricing />
           <FinalCTA />
+          <Pricing />
+          <ContactFormCard />
           <FAQ />
         </Suspense>
       </main>
