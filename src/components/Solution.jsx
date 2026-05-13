@@ -30,7 +30,7 @@ export default function Solution() {
         <AnimSection>
           <AnimItem variant={fadeUp}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white text-center max-w-3xl mx-auto leading-tight mb-4">
-              We Handle <span className="gradient-text">Everything.</span>
+              We Handle <span className="text-white">Everything.</span>
               <br />
               You Focus on Your Mission.
             </h2>

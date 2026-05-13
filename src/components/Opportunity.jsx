@@ -227,23 +227,6 @@ export default function Opportunity() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <AnimSection>
           <AnimItem variant={fadeUp}>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white text-center max-w-4xl mx-auto leading-tight mb-6">
-              <span className="gradient-text">$10,000/Month.</span> Every Month.{" "}
-              <br className="hidden sm:block" />
-              Already Yours If You Qualify.
-            </h2>
-          </AnimItem>
-
-          <AnimItem variant={fadeUp}>
-            <p className="text-slate-300 text-center max-w-3xl mx-auto text-lg mb-16 leading-relaxed">
-              Google Ad Grants gives eligible 501(c)(3) nonprofits up to{" "}
-              <strong className="text-white">
-                $10,000/month — $120,000/year
-              </strong>{" "}
-              — in free search advertising on Google. That's your organization
-              appearing at the top of Google results every time someone searches
-              for what you do.
-            </p>
             <div className="flex justify-center mb-8">
               <button
                 onClick={scrollToEligibility}
@@ -398,42 +381,61 @@ export default function Opportunity() {
           </div>
         </AnimSection>
 
-        {/* Phone mockup demo */}
-        <div className="mt-20 flex flex-col items-center">
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center text-slate-400 text-xs font-semibold tracking-[0.2em] uppercase mb-10"
-          >
-            Here's what it looks like in Google Search
-          </motion.p>
+        {/* Phone mockup demo — left, h2+p — right */}
+        <div className="mt-20 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          {/* Left: phone mockup */}
+          <div className="flex flex-col items-center shrink-0">
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center text-slate-400 text-xs font-semibold tracking-[0.2em] uppercase mb-10"
+            >
+              Here's what it looks like in Google Search
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 32 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+              viewport={{ once: true }}
+            >
+              <PhoneMockup />
+            </motion.div>
+          </div>
+
+          {/* Right: h2 + p + button */}
           <motion.div
-            initial={{ opacity: 0, y: 32 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
             viewport={{ once: true }}
+            className="flex-1 min-w-0"
           >
-            <PhoneMockup />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="mt-10 flex justify-center mb-8"
-          >
-            <button
-              onClick={() =>
-                document
-                  .querySelector("#contact-form")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="btn-primary text-lg !py-4 !px-8"
-            >
-              Check My Eligibility →
-            </button>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white text-center lg:text-left leading-tight mb-6">
+              $10,000/Month. Every Month. Already Yours If You Qualify.
+            </h2>
+            <p className="text-slate-300 text-center lg:text-left text-lg mb-10 leading-relaxed">
+              Google Ad Grants gives eligible 501(c)(3) nonprofits up to{" "}
+              <strong className="text-white">
+                $10,000/month — $120,000/year
+              </strong>{" "}
+              — in free search advertising on Google. That's your organization
+              appearing at the top of Google results every time someone searches
+              for what you do.
+            </p>
+            <div className="flex justify-center lg:justify-start">
+              <button
+                onClick={() =>
+                  document
+                    .querySelector("#contact-form")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="btn-primary text-lg !py-4 !px-8"
+              >
+                Check My Eligibility →
+              </button>
+            </div>
           </motion.div>
         </div>
       </div>

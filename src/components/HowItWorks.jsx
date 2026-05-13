@@ -59,7 +59,7 @@ export default function HowItWorks() {
           <AnimItem variant={fadeUp}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white text-center max-w-3xl mx-auto leading-tight mb-4">
               From "I'm Interested" to{" "}
-              <span className="gradient-text">Live Campaigns in 30 Days.</span>
+              <span className="text-white">Live Campaigns in 30 Days.</span>
             </h2>
             <p className="text-slate-400 text-center max-w-xl mx-auto mb-16">
               A clear, simple process — we handle everything, you get results.

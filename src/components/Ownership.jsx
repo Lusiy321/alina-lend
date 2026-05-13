@@ -33,7 +33,7 @@ export default function Ownership() {
           <AnimItem variant={fadeUp}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white text-center mb-4 leading-tight">
               Your Account. Your Data.{" "}
-              <span className="gradient-text">Always.</span>
+              <span className="text-white">Always.</span>
             </h2>
             <p className="text-slate-400 text-center max-w-2xl mx-auto mb-14">
               We work inside YOUR Google Ad Grants account — not ours. That

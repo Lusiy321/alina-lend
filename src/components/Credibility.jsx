@@ -99,7 +99,7 @@ export default function Credibility() {
   return (
     <section
       id="credibility"
-      className="relative py-14 sm:py-32 overflow-hidden"
+      className="relative py-14 sm:py-20 overflow-hidden"
     >
       <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-purple-500/6 rounded-full blur-[140px] pointer-events-none" />
 
@@ -108,7 +108,7 @@ export default function Credibility() {
           <AnimItem variant={fadeUp}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white text-center max-w-3xl mx-auto leading-tight mb-4">
               We've Done This Before.{" "}
-              <span className="gradient-text-gold">Here's the Proof.</span>
+              <span className="text-white">Here's the Proof.</span>
             </h2>
             <p className="text-slate-400 text-center mb-16 max-w-xl mx-auto">
               Real results from real nonprofits.
@@ -138,7 +138,7 @@ export default function Credibility() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
           variants={staggerContainer}
-          className="grid lg:grid-cols-3 gap-6 mb-20"
+          className="grid lg:grid-cols-3 gap-6 mb-8"
         >
           {testimonials.map((t, i) => (
             <motion.div
@@ -216,7 +216,7 @@ export default function Credibility() {
             </motion.div>
           ))}
         </motion.div>
-        <div className="mt-12 mb-16 flex justify-center">
+        <div className="mt-6 mb-8 flex justify-center">
           <button
             onClick={scrollToEligibility}
             className="btn-primary text-lg !py-4 !px-8"

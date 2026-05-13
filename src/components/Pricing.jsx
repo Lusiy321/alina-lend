@@ -107,7 +107,7 @@ export default function Pricing() {
                     <div className="text-white font-black text-4xl leading-none">
                       $250<span className="text-lg font-semibold">/mo</span>
                     </div>
-                    <div className="text-emerald-200 text-xs mt-1">
+                    <div className="text-emerald-400 text-xs mt-1">
                       after free grant setup
                     </div>
                   </div>
@@ -152,7 +152,7 @@ export default function Pricing() {
                     onClick={scrollToEligibility}
                     className="btn-primary text-lg !py-4 !px-8"
                   >
-                    → Start my free period
+                    → Start My Free Period
                   </button>
                 </div>
               </div>
@@ -225,16 +225,18 @@ export default function Pricing() {
                 </span>
               </div>
 
-              <button
-                onClick={() =>
-                  document
-                    .querySelector("#contact-form")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-                className="btn-primary w-full justify-center text-lg !py-4 !px-8 mb-3"
-              >
-                → Start My Free Month
-              </button>
+              <div className="flex justify-center">
+                <button
+                  onClick={() =>
+                    document
+                      .querySelector("#contact-form")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                  className="btn-primary text-lg !py-4 !px-8 mb-3"
+                >
+                  → Start My Free Period
+                </button>
+              </div>
               <p className="text-center text-slate-500 text-xs">
                 No credit card required · Cancel anytime · 30-day notice
               </p>
