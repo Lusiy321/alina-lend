@@ -3,7 +3,6 @@ export default function ContactFormCard() {
     <section id="contact-form" className="py-20 bg-gray-50 scroll-mt-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="bg-[#ffffff] rounded-3xl border border-gray-100 p-6 sm:p-10">
-          {/* Badge */}
           <span className="inline-flex items-center gap-1.5 bg-[#eef9d0] text-[#3B6D11] text-xs font-semibold px-4 py-1.5 rounded-full mb-5">
             📅 Free 30-minute call
           </span>
@@ -52,7 +51,6 @@ export default function ContactFormCard() {
           >
             Schedule a Call — It's Free →
           </a>
-
           <p className="text-center text-sm sm:text-lg text-gray-400 mt-4">
             No pressure · No commitment · Takes 30 minutes
           </p>
