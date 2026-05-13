@@ -129,7 +129,7 @@ export default function Hero() {
                 <div className="flex flex-col items-center gap-3 mb-10">
                   <div className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-[#aac976] border border-[#aac976]">
                     <span>🎁</span>
-                    <span className="text-[#2d3a1c] text-base sm:text-lg font-bold">
+                    <span className="text-[#2d3a1c] text-sm sm:text-lg font-bold">
                       We get you the Google Grant — for free
                     </span>
                   </div>
