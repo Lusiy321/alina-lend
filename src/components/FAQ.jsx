@@ -96,7 +96,7 @@ function FAQItem({ q, a, isOpen, onToggle }) {
             transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
             className="overflow-hidden"
           >
-            <p className="text-slate-400 text-sm leading-relaxed pb-5">{a}</p>
+            <p className="text-slate-400 text-lg leading-relaxed pb-5">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>

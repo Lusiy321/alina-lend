@@ -231,7 +231,7 @@ samp {
     justify-content: center;
     gap: 10px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 24px;
     letter-spacing: -0.01em;
     position: relative;
     overflow: hidden;
@@ -242,10 +242,6 @@ samp {
     border-color: #aac976;
     transform: translateY(-2px);
     box-shadow: 0 12px 28px rgba(170, 201, 118, 0.4);
-}
-
-.btn-primary:active {
-    transform: translateY(0);
 }
 
 .btn-secondary {
@@ -263,7 +259,7 @@ samp {
     justify-content: center;
     gap: 10px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 24px;
 }
 
 .btn-secondary:hover {

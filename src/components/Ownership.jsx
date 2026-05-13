@@ -59,8 +59,10 @@ export default function Ownership() {
                   {point.icon}
                 </div>
                 <div>
-                  <h3 className="text-white font-bold mb-2">{point.title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">
+                  <h3 className="text-white font-bold text-lg mb-2">
+                    {point.title}
+                  </h3>
+                  <p className="text-slate-400 text-lg leading-relaxed">
                     {point.desc}
                   </p>
                 </div>
@@ -76,7 +78,7 @@ export default function Ownership() {
                 .querySelector("#contact-form")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="btn-primary text-base !py-4 !px-8"
+            className="btn-primary text-2xl !py-4 !px-8"
           >
             Check My Eligibility →
             <ChevronRight size={18} />

@@ -99,7 +99,7 @@ export default function SocialProofBar() {
               .querySelector("#credibility")
               ?.scrollIntoView({ behavior: "smooth" })
           }
-          className="btn-secondary text-base !py-3 !px-6"
+          className="btn-secondary text-2xl !py-3 !px-6"
         >
           View Case Studies
         </button>

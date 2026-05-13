@@ -116,10 +116,10 @@ export default function HowItWorks() {
                         {step.time}
                       </span>
                     </div>
-                    <h3 className="text-white font-bold text-xl mb-3">
+                    <h3 className="text-white font-bold text-lg mb-3">
                       {step.title}
                     </h3>
-                    <p className="text-slate-400 text-sm leading-relaxed">
+                    <p className="text-slate-400 text-lg leading-relaxed">
                       {step.desc}
                     </p>
                   </motion.div>
@@ -152,7 +152,7 @@ export default function HowItWorks() {
               .querySelector("#contact-form")
               ?.scrollIntoView({ behavior: "smooth" })
           }
-          className="btn-primary text-base !py-4 !px-8"
+          className="btn-primary text-2xl !py-4 !px-8"
         >
           Check My Eligibility →
           <ChevronRight size={18} />

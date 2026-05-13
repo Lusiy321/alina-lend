@@ -267,7 +267,7 @@ export default function Opportunity() {
                 </motion.div>
               ))}
             </div>
-            <p className="text-emerald-400 font-semibold text-sm mt-5 text-center">
+            <p className="text-emerald-400 font-semibold text-lg mt-5 text-center">
               → Your organization appears first. You pay $0.
             </p>
           </motion.div>
@@ -318,7 +318,7 @@ export default function Opportunity() {
                   <p className="text-[#c44a32] font-bold mb-1">
                     Every month you wait...
                   </p>
-                  <p className="text-slate-300 text-sm leading-relaxed">
+                  <p className="text-slate-300 text-lg leading-relaxed">
                     ...is{" "}
                     <strong className="text-[#c44a32]">
                       $10,000 in free advertising
@@ -359,7 +359,7 @@ export default function Opportunity() {
           <div className="flex justify-center mb-8 mt-8">
             <button
               onClick={scrollToEligibility}
-              className="btn-primary text-lg !py-4 !px-8"
+              className="btn-primary text-2xl !py-4 !px-8"
             >
               Check My Eligibility →
             </button>
@@ -400,7 +400,7 @@ export default function Opportunity() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white text-center lg:text-left leading-tight mb-6">
               $10,000/Month. Every Month. Already Yours If You Qualify.
             </h2>
-            <p className="text-slate-300 text-center lg:text-left text-lg mb-10 leading-relaxed">
+            <p className="text-slate-300 text-center lg:text-left text-2xl mb-10 leading-relaxed">
               Google gives eligible nonprofits{" "}
               <strong className="text-white">
                 $10,000/month in free search ads
@@ -414,7 +414,7 @@ export default function Opportunity() {
                     .querySelector("#contact-form")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-                className="btn-primary text-lg !py-4 !px-8"
+                className="btn-primary text-2xl !py-4 !px-8"
               >
                 Check My Eligibility →
               </button>

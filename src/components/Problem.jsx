@@ -52,7 +52,7 @@ export default function Problem() {
             </h2>
           </AnimItem>
           <AnimItem variant={fadeUp}>
-            <p className="text-slate-400 text-center max-w-2xl mx-auto mb-16 text-lg">
+            <p className="text-slate-400 text-center max-w-2xl mx-auto mb-16 text-2xl">
               Most nonprofits we talk to are stuck in the same place:
             </p>
           </AnimItem>
@@ -73,10 +73,10 @@ export default function Problem() {
                 <div className="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   {pain.icon}
                 </div>
-                <h3 className="text-white font-bold text-base mb-2">
+                <h3 className="text-white font-bold text-lg mb-2">
                   {pain.title}
                 </h3>
-                <p className="text-slate-400 text-sm leading-relaxed">
+                <p className="text-slate-400 text-lg leading-relaxed">
                   {pain.desc}
                 </p>
               </motion.div>
@@ -99,7 +99,7 @@ export default function Problem() {
             <div className="flex justify-center mt-12 mb-8">
               <a
                 href="#contact-form"
-                className="btn-primary text-lg !py-4 !px-8"
+                className="btn-primary text-2xl !py-4 !px-8"
               >
                 Check My Eligibility →
               </a>

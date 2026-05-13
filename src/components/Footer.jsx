@@ -18,7 +18,7 @@ export default function Footer() {
               decoding="async"
               className="h-7 w-auto mb-5"
             />
-            <p className="text-slate-500 text-sm leading-relaxed max-w-sm mb-5">
+            <p className="text-slate-500 text-lg leading-relaxed max-w-sm mb-5">
               Helping nonprofits access and maximize Google Ad Grants since
               2018. Certified partner. 200+ organizations helped.
             </p>

@@ -72,7 +72,7 @@ export default function Header() {
             href="https://api.dgtl-house.com/widget/bookings/dgtlhouse-nonprofits"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary text-sm !py-2.5 !px-5"
+            className="btn-primary text-2xl !py-2.5 !px-5"
           >
             Schedule call
             <ChevronRight size={16} />
@@ -112,7 +112,7 @@ export default function Header() {
                   href="https://api.dgtl-house.com/widget/bookings/dgtlhouse-nonprofits"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary w-full justify-center"
+                  className="btn-primary w-full justify-center text-2xl"
                 >
                   Check Eligibility
                   <ChevronRight size={16} />

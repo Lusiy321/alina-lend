@@ -48,7 +48,7 @@ export default function Guarantee() {
                   Grant First. Payment After.
                 </h2>
 
-                <p className="text-slate-300 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+                <p className="text-slate-300 text-2xl max-w-2xl mx-auto mb-8 leading-relaxed">
                   We secure your Google Ad Grant at no cost — you only pay once
                   we're managing your live campaigns.
                 </p>
@@ -103,7 +103,7 @@ export default function Guarantee() {
                   ))}
                 </div>
 
-                <p className="text-slate-400 text-sm italic mb-8">
+                <p className="text-slate-400 text-lg italic mb-8">
                   "We get you the grant first — then you decide if you want us
                   to grow it."
                 </p>
@@ -114,7 +114,7 @@ export default function Guarantee() {
                       .querySelector("#contact-form")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                  className="btn-primary text-base !py-4 !px-8 mx-auto"
+                  className="btn-primary text-2xl !py-4 !px-8 mx-auto"
                 >
                   Claim My Free Period →
                   <ChevronRight size={18} />

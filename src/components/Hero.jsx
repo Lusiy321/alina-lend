@@ -113,7 +113,7 @@ export default function Hero() {
 
                 {/* Subheadline */}
                 <AnimItem variant={fadeUp}>
-                  <p className="text-lg sm:text-xl text-[#52504C] leading-relaxed text-center lg:text-left">
+                  <p className="text-2xl text-[#52504C] leading-relaxed text-center lg:text-left">
                     We handle Google Ad Grants end-to-end — so more donors,
                     volunteers, and partners find you. At $0 ad spend.{" "}
                     <strong className="text-[#52504C]">$0 ad spend.</strong>
@@ -147,7 +147,7 @@ export default function Hero() {
                 <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
                   <button
                     onClick={scrollToEligibility}
-                    className="btn-primary text-lg !py-4 !px-8"
+                    className="btn-primary text-2xl !py-4 !px-8"
                   >
                     Check My Eligibility →
                   </button>
@@ -157,7 +157,7 @@ export default function Hero() {
                         .querySelector("#opportunity")
                         ?.scrollIntoView({ behavior: "smooth" })
                     }
-                    className="btn-secondary text-base !py-3.5 !px-7"
+                    className="btn-secondary text-2xl !py-3.5 !px-7"
                   >
                     See How It Works
                   </button>

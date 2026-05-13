@@ -34,7 +34,7 @@ export default function Solution() {
               <br />
               You Focus on Your Mission.
             </h2>
-            <p className="text-slate-400 text-center max-w-2xl mx-auto mb-16 text-lg">
+            <p className="text-slate-400 text-center max-w-2xl mx-auto mb-16 text-2xl">
               Our team takes over your Google Ad Grant from start to finish — or
               builds it from the ground up. No Google Ads expertise required. No
               new staff. No learning curve.
@@ -47,7 +47,7 @@ export default function Solution() {
           <AnimSection>
             <AnimItem variant={fadeUp}>
               <div className="glass-card rounded-2xl p-7 sm:p-9">
-                <h3 className="text-white font-bold text-xl mb-6">
+                <h3 className="text-white font-bold text-lg mb-6">
                   Everything we take off your plate:
                 </h3>
                 <motion.div
@@ -90,13 +90,13 @@ export default function Solution() {
                       No website? No problem.
                     </h3>
                   </div>
-                  <p className="text-slate-300 text-sm leading-relaxed mb-4">
+                  <p className="text-slate-300 text-lg leading-relaxed mb-4">
                     Google Ad Grants requires a quality website that meets their
                     guidelines. If you don't have one — or yours doesn't meet
                     the requirements — we'll build it for you.
                   </p>
                   <div className="p-4 rounded-xl bg-white/[0.04] border border-white/[0.07]">
-                    <p className="text-blue-300 text-sm font-semibold mb-2">
+                    <p className="text-blue-300 text-lg font-semibold mb-2">
                       Included in your onboarding:
                     </p>
                     <ul className="space-y-1.5 text-slate-400 text-sm">
@@ -119,7 +119,7 @@ export default function Solution() {
               {/* What you don't need */}
               <AnimItem variant={fadeUp}>
                 <div className="glass-card rounded-2xl p-6">
-                  <h3 className="text-white font-bold mb-4">
+                  <h3 className="text-white font-bold text-lg mb-4">
                     What you DON'T need:
                   </h3>
                   <div className="space-y-2.5">
@@ -156,7 +156,7 @@ export default function Solution() {
               .querySelector("#contact-form")
               ?.scrollIntoView({ behavior: "smooth" })
           }
-          className="btn-primary text-base !py-4 !px-8"
+          className="btn-primary text-2xl !py-4 !px-8"
         >
           Check My Eligibility →
           <ChevronRight size={18} />

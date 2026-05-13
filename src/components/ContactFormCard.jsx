@@ -46,7 +46,7 @@ function ContactForm() {
         <div className="w-16 h-16 rounded-full bg-emerald-500/15 flex items-center justify-center mx-auto mb-4 glow-green">
           <CheckCircle size={32} className="text-emerald-400" />
         </div>
-        <h3 className="text-white font-black text-2xl mb-3">
+        <h3 className="text-white font-black text-lg mb-3">
           You're on the list! 🎉
         </h3>
         <p className="text-slate-300 text-base">
@@ -124,7 +124,7 @@ function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="btn-primary w-full justify-center text-base !py-4 disabled:opacity-60 disabled:cursor-not-allowed"
+        className="btn-primary w-full justify-center text-2xl !py-4 disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {status === "loading" ? (
           <>
@@ -156,10 +156,10 @@ export default function ContactFormCard() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/[0.04] to-transparent rounded-2xl pointer-events-none" />
             <div className="relative z-10">
-              <h3 className="text-white font-black text-2xl mb-1">
+              <h3 className="text-white font-black text-lg mb-1">
                 Check My Eligibility
               </h3>
-              <p className="text-slate-400 text-sm mb-7">
+              <p className="text-slate-400 text-lg mb-7">
                 Free. 30 minutes. No obligation.
               </p>
               <ContactForm />

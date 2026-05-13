@@ -210,7 +210,7 @@ export default function Credibility() {
               </div>
 
               {/* Quote */}
-              <p className="text-slate-300 text-sm leading-relaxed">
+              <p className="text-slate-300 text-lg leading-relaxed">
                 &ldquo;{t.quote}&rdquo;
               </p>
             </motion.div>
@@ -219,7 +219,7 @@ export default function Credibility() {
         <div className="mt-6 mb-8 flex justify-center">
           <button
             onClick={scrollToEligibility}
-            className="btn-primary text-lg !py-4 !px-8"
+            className="btn-primary text-2xl !py-4 !px-8"
           >
             Check My Eligibility →
           </button>
@@ -228,10 +228,10 @@ export default function Credibility() {
         <AnimSection>
           <AnimItem variant={fadeUp}>
             <div className="glass-card rounded-2xl p-7 sm:p-9 mb-10">
-              <h3 className="text-white font-bold text-xl text-center mb-2">
+              <h3 className="text-white font-bold text-lg text-center mb-2">
                 We've worked with nonprofits in:
               </h3>
-              <p className="text-slate-400 text-center text-sm mb-7">
+              <p className="text-slate-400 text-center text-lg mb-7">
                 Every niche, every mission.
               </p>
               <div className="flex flex-wrap gap-2.5 justify-center">
