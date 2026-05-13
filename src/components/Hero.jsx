@@ -44,15 +44,15 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16 bg-[#ffffff]"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 sm:pt-20 pb-16 bg-[#ffffff]"
     >
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         <AnimSection>
           <div className="flex flex-col gap-8 lg:gap-10">
             {/* Google for Nonprofits Partners badge — centered above everything */}
             <AnimItem variant={fadeUp}>
-              <div className="flex justify-center">
-                <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#ffffff] border border-[#ebe9e0] shadow-sm">
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-3 w-full sm:w-auto">
+                <div className="flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#ffffff] border border-[#ebe9e0] shadow-sm w-full sm:w-auto justify-center">
                   <svg
                     viewBox="0 0 24 24"
                     width="20"
@@ -78,6 +78,12 @@ export default function Hero() {
                   </svg>
                   <span className="text-[#161514] text-base sm:text-lg font-semibold tracking-wide">
                     Google for Nonprofits Partners
+                  </span>
+                </div>
+                <div className="flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#ffffff] border border-[#ebe9e0] shadow-sm w-full sm:w-auto justify-center">
+                  <span>🎁</span>
+                  <span className="text-[#161514] text-xs sm:text-lg font-semibold tracking-wide">
+                    We get you the Google Grant — for free
                   </span>
                 </div>
               </div>
@@ -126,18 +132,14 @@ export default function Hero() {
             <div className="flex flex-col items-center">
               {/* Free grant + timeline pills */}
               <AnimItem variant={fadeUp}>
-                <div className="flex flex-col items-center gap-3 mb-10">
-                  <div className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-[#aac976] border border-[#aac976]">
-                    <span>🎁</span>
-                    <span className="text-[#2d3a1c] text-sm sm:text-lg font-bold">
-                      We get you the Google Grant — for free
-                    </span>
-                  </div>
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-100 border border-slate-200">
-                    <Clock size={16} className="text-yellow-400" />
-                    <span className="text-slate-600 text-base sm:text-lg font-medium">
+                <div className="flex flex-col items-center gap-3 mb-4 sm:mb-10">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#f0eee6]">
+                    <Clock size={16} className="text-[#3f5028]" />
+                    <span className="text-[#52504C] text-sm sm:text-lg font-medium">
                       Grant live in as little as{" "}
-                      <strong className="text-[#161514]">2 weeks</strong>
+                      <strong className="text-[#3f5028] font-bold">
+                        2 weeks
+                      </strong>
                     </span>
                   </div>
                 </div>
