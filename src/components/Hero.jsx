@@ -114,9 +114,8 @@ export default function Hero() {
                 {/* Subheadline */}
                 <AnimItem variant={fadeUp}>
                   <p className="text-lg sm:text-xl text-[#52504C] leading-relaxed text-center lg:text-left">
-                    We get your nonprofit into Google Ad Grants and manage
-                    everything from day one — so you attract more donors,
-                    volunteers, and inquiries. All with{" "}
+                    We handle Google Ad Grants end-to-end — so more donors,
+                    volunteers, and partners find you. At $0 ad spend.{" "}
                     <strong className="text-[#52504C]">$0 ad spend.</strong>
                   </p>
                 </AnimItem>
@@ -143,7 +142,6 @@ export default function Hero() {
                   </div>
                 </div>
               </AnimItem>
-
               {/* CTAs */}
               <AnimItem variant={scaleIn}>
                 <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
@@ -165,7 +163,6 @@ export default function Hero() {
                   </button>
                 </div>
               </AnimItem>
-
               {/* Supporting micro-copy */}
               <AnimItem variant={fadeIn}>
                 <div className="flex flex-wrap items-center justify-center gap-6 mb-10">
@@ -183,24 +180,6 @@ export default function Hero() {
                 </div>
               </AnimItem>
 
-              {/* Trust badges row */}
-              <AnimItem variant={fadeUp}>
-                <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-3 mb-10">
-                  {trustBadges.map((badge, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-500/40 transition-colors duration-300"
-                    >
-                      {badge.icon}
-                      <span className="text-slate-600 text-sm font-medium whitespace-nowrap">
-                        {badge.text}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </AnimItem>
-
-              {/* Stats row */}
               <AnimItem variant={fadeUp}>
                 <div className="grid grid-cols-3 gap-4 sm:gap-8">
                   {[

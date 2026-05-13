@@ -401,13 +401,11 @@ export default function Opportunity() {
               $10,000/Month. Every Month. Already Yours If You Qualify.
             </h2>
             <p className="text-slate-300 text-center lg:text-left text-lg mb-10 leading-relaxed">
-              Google Ad Grants gives eligible 501(c)(3) nonprofits up to{" "}
+              Google gives eligible nonprofits{" "}
               <strong className="text-white">
-                $10,000/month — $120,000/year
+                $10,000/month in free search ads
               </strong>{" "}
-              — in free search advertising on Google. That's your organization
-              appearing at the top of Google results every time someone searches
-              for what you do.
+              — so you show up first when people look for what you do.
             </p>
             <div className="flex justify-center lg:justify-start">
               <button

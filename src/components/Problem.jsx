@@ -88,23 +88,21 @@ export default function Problem() {
               className="sm:col-span-2 lg:col-span-3 rounded-2xl p-6 bg-gradient-to-r from-red-500/10 via-orange-500/5 to-red-500/10 border border-red-500/15"
             >
               <p className="text-slate-200 text-center text-lg font-medium leading-relaxed">
-                The hardest part? It's not the mission.{" "}
-                <span className="text-white font-bold">
-                  You know what you're doing and why it matters.
-                </span>{" "}
-                The problem is that the people who need you — and want to
-                support you —{" "}
+                Your mission is clear.{" "}
                 <span className="text-red-400 font-bold">
-                  simply can't find you.
+                  The problem? The people who need you can't find you.
                 </span>
               </p>
             </motion.div>
           </motion.div>
           <AnimItem variant={fadeUp}>
             <div className="flex justify-center mt-12 mb-8">
-              <button className="btn-primary text-lg !py-4 !px-8">
+              <a
+                href="#contact-form"
+                className="btn-primary text-lg !py-4 !px-8"
+              >
                 Check My Eligibility →
-              </button>
+              </a>
             </div>
           </AnimItem>{" "}
         </AnimSection>

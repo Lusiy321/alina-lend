@@ -21,7 +21,7 @@ const ScrollToTop = lazy(() => import("./components/ScrollToTop"));
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#f8f7f3]">
+    <div className="min-h-screen bg-[#ffffff]">
       <Header />
       <main>
         <Hero />

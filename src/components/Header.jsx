@@ -29,7 +29,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#f8f7f3]/95 backdrop-blur-lg border-b border-[#ebe9e0] py-3"
+          ? "bg-[#ffffff]/95 backdrop-blur-lg border-b border-[#ebe9e0] py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -95,7 +95,7 @@ export default function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden border-t border-[#ebe9e0] bg-[#f8f7f3]/98 backdrop-blur-lg"
+            className="md:hidden border-t border-[#ebe9e0] bg-[#ffffff]/98 backdrop-blur-lg"
           >
             <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
               {navLinks.map((link) => (
