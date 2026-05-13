@@ -112,7 +112,7 @@ export default function HowItWorks() {
                     </div>
 
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="text-lg font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-white/[0.05] border border-white/[0.08] text-slate-400">
+                      <span className="text-sm sm:text-lg font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-white/[0.05] border border-white/[0.08] text-slate-400">
                         {step.time}
                       </span>
                     </div>

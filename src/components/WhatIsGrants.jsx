@@ -82,7 +82,7 @@ export default function WhatIsGrants() {
                 <div className="glass-card rounded-2xl p-6 border-red-500/15 flex-1">
                   <div className="flex items-center gap-2 mb-4">
                     <XCircle size={18} className="text-red-400" />
-                    <span className="text-red-400 font-bold text-lg uppercase tracking-wide">
+                    <span className="text-red-400 font-bold text-sm sm:text-lg uppercase tracking-wide">
                       Without Google Ad Grants
                     </span>
                   </div>
@@ -96,7 +96,7 @@ export default function WhatIsGrants() {
                     ].map((item, i) => (
                       <div
                         key={i}
-                        className={`flex items-start gap-2.5 text-slate-400 text-lg ${i === 0 ? "font-bold text-slate-300" : ""}`}
+                        className={`flex items-start gap-2.5 text-slate-400 text-sm sm:text-lg ${i === 0 ? "font-bold text-slate-300" : ""}`}
                       >
                         <XCircle
                           size={14}
@@ -112,7 +112,7 @@ export default function WhatIsGrants() {
                 <div className="rounded-2xl p-6 bg-gradient-to-br from-emerald-500/10 to-emerald-700/5 border border-emerald-500/20 flex-1">
                   <div className="flex items-center gap-2 mb-4">
                     <CheckCircle size={18} className="text-emerald-400" />
-                    <span className="text-emerald-400 font-bold text-lg uppercase tracking-wide">
+                    <span className="text-emerald-400 font-bold text-sm sm:text-lg uppercase tracking-wide">
                       With Google Ad Grants
                     </span>
                   </div>
@@ -126,7 +126,7 @@ export default function WhatIsGrants() {
                     ].map((item, i) => (
                       <div
                         key={i}
-                        className={`flex items-start gap-2.5 text-slate-300 text-lg ${i === 0 ? "font-bold text-white" : ""}`}
+                        className={`flex items-start gap-2.5 text-slate-300 text-sm sm:text-lg ${i === 0 ? "font-bold text-white" : ""}`}
                       >
                         <CheckCircle
                           size={14}
@@ -144,10 +144,10 @@ export default function WhatIsGrants() {
                     <Award size={24} className="text-yellow-400" />
                   </span>
                   <div>
-                    <p className="text-white text-lg font-semibold">
+                    <p className="text-white text-sm sm:text-lg font-semibold">
                       Official Google Program
                     </p>
-                    <p className="text-slate-500 text-lg">
+                    <p className="text-slate-500 text-sm sm:text-lg">
                       Not a loophole — a real, stable program since 2003.
                     </p>
                   </div>

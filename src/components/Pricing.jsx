@@ -140,7 +140,7 @@ export default function Pricing() {
                 {/* Grant setup free highlight */}
                 <div className="rounded-2xl p-5 bg-gradient-to-r from-emerald-400/10 to-emerald-600/5 border border-emerald-400/20 text-center mb-6">
                   <div className="text-3xl mb-2">🎁</div>
-                  <div className="text-emerald-400 font-black text-lg sm:text-xl mb-1">
+                  <div className="text-emerald-400 font-black text-sm sm:text-xl mb-1">
                     GRANT SETUP — 100% FREE
                   </div>
                   <p className="text-slate-300 text-sm sm:text-lg">
@@ -213,13 +213,13 @@ export default function Pricing() {
                 >
                   🔴 {spotsLeft}
                 </motion.span>
-                <span className="text-red-400 font-bold text-lg">
+                <span className="text-red-400 font-bold text-sm sm:text-lg">
                   spots remaining this month
                 </span>
               </div>
 
               <div className="flex items-center gap-2 mb-6">
-                <span className="text-slate-400 font-bold text-lg">
+                <span className="text-slate-400 font-bold text-sm sm:text-lg">
                   ⏱️ Offer expires in{" "}
                   <span className="font-mono text-white text-base">
                     {formatTime(timeLeft)}

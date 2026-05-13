@@ -34,7 +34,7 @@ export default function Solution() {
               <br />
               You Focus on Your Mission.
             </h2>
-            <p className="text-slate-400 text-center max-w-2xl mx-auto mb-16 text-base sm:text-lg lg:text-2xl">
+            <p className="text-slate-400 text-center max-w-2xl mx-auto mb-16 text-sm sm:text-lg lg:text-2xl">
               Our team takes over your Google Ad Grant from start to finish — or
               builds it from the ground up. No Google Ads expertise required. No
               new staff. No learning curve.
@@ -119,7 +119,7 @@ export default function Solution() {
               {/* What you don't need */}
               <AnimItem variant={fadeUp}>
                 <div className="glass-card rounded-2xl p-6">
-                  <h3 className="text-white font-bold text-lg mb-4">
+                  <h3 className="text-white font-bold text-sm sm:text-lg mb-4">
                     What you DON'T need:
                   </h3>
                   <div className="space-y-2.5">
@@ -132,14 +132,14 @@ export default function Solution() {
                     ].map((item, i) => (
                       <div
                         key={i}
-                        className="flex items-center gap-2.5 text-slate-400 text-lg"
+                        className="flex items-center gap-2.5 text-slate-400 text-sm sm:text-lg"
                       >
                         <span className="text-red-500/70 text-base">✗</span>
                         <span className="line-through opacity-60">{item}</span>
                       </div>
                     ))}
                   </div>
-                  <div className="mt-4 pt-4 border-t border-white/[0.06] text-emerald-400 text-lg font-semibold">
+                  <div className="mt-4 pt-4 border-t border-white/[0.06] text-emerald-400 text-sm sm:text-lg font-semibold">
                     You need less than 2 hours/month from your team. We handle
                     the rest.
                   </div>

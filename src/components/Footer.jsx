@@ -18,7 +18,7 @@ export default function Footer() {
               decoding="async"
               className="h-7 w-auto mb-5"
             />
-            <p className="text-slate-500 text-lg leading-relaxed max-w-sm mb-5">
+            <p className="text-slate-500 text-sm sm:text-lg leading-relaxed max-w-sm mb-5">
               Helping nonprofits access and maximize Google Ad Grants since
               2018. Certified partner. 200+ organizations helped.
             </p>
@@ -26,7 +26,7 @@ export default function Footer() {
 
           {/* Contacts */}
           <div className="flex flex-col gap-3 lg:text-right">
-            <div className="text-lg text-slate-500">
+            <div className="text-sm sm:text-lg text-slate-500">
               <a
                 href="mailto:nonprofit@dgtl-house.com"
                 className="hover:text-emerald-400 transition-colors"
@@ -34,8 +34,10 @@ export default function Footer() {
                 nonprofit@dgtl-house.com
               </a>
             </div>
-            <div className="text-lg text-slate-500">1 (224) 584 8401</div>
-            <div className="text-lg text-slate-500">
+            <div className="text-sm sm:text-lg text-slate-500">
+              1 (224) 584 8401
+            </div>
+            <div className="text-sm sm:text-lg text-slate-500">
               1635 Eagle Grove Ct. Wheeling, IL 60090
             </div>
           </div>
@@ -43,10 +45,10 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/[0.05] flex flex-wrap items-center justify-between gap-4">
-          <p className="text-slate-600 text-lg">
+          <p className="text-slate-600 text-sm sm:text-lg">
             © {year} DGTL-House Agency. All rights reserved.
           </p>
-          <div className="flex items-center gap-4 text-lg text-slate-600">
+          <div className="flex items-center gap-4 text-sm sm:text-lg text-slate-600">
             <span className="flex items-center gap-1.5">
               Google Ad Grants Certified Partner
             </span>
