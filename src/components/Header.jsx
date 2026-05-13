@@ -72,7 +72,7 @@ export default function Header() {
             href="https://api.dgtl-house.com/widget/bookings/dgtlhouse-nonprofits"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary text-2xl !py-2.5 !px-5"
+            className="btn-primary !text-lg !py-2.5 !px-5"
           >
             Schedule call
             <ChevronRight size={16} />
@@ -102,7 +102,7 @@ export default function Header() {
                 <button
                   key={link.label}
                   onClick={() => handleNav(link.href)}
-                  className="text-left px-4 py-3 text-slate-300 hover:text-white text-lg font-medium rounded-lg hover:bg-white/[0.06] transition-all"
+                  className="text-left px-4 py-3 text-slate-300 hover:text-white text-sx font-medium rounded-lg hover:bg-white/[0.06] transition-all"
                 >
                   {link.label}
                 </button>
@@ -112,9 +112,9 @@ export default function Header() {
                   href="https://api.dgtl-house.com/widget/bookings/dgtlhouse-nonprofits"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary w-full justify-center text-2xl"
+                  className="btn-primary w-full justify-center !text-lg !py-2.5 !px-5"
                 >
-                  Check Eligibility
+                  Schedule call
                   <ChevronRight size={16} />
                 </a>
               </div>
