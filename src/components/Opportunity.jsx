@@ -222,22 +222,9 @@ export default function Opportunity() {
   return (
     <section
       id="opportunity"
-      className="relative pb-24 sm:pb-32 overflow-hidden scroll-mt-[88px]"
+      className="relative -mt-8 pt-0 pb-24 sm:pb-32 overflow-hidden scroll-mt-[88px]"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <AnimSection>
-          <AnimItem variant={fadeUp}>
-            <div className="flex justify-center mb-8">
-              <button
-                onClick={scrollToEligibility}
-                className="btn-primary text-lg !py-4 !px-8"
-              >
-                Check My Eligibility →
-              </button>
-            </div>
-          </AnimItem>
-        </AnimSection>
-
         {/* Two column layout */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {/* Left: Search queries visual */}
@@ -308,9 +295,7 @@ export default function Opportunity() {
                 </div>
                 <div className="mt-5 pt-5 border-t border-white/[0.06] grid grid-cols-2 gap-4">
                   <div>
-                    <div className="text-2xl font-black text-yellow-400">
-                      $120K
-                    </div>
+                    <div className="text-2xl font-black text-white">$120K</div>
                     <div className="text-slate-400 text-xs mt-0.5">
                       per year total value
                     </div>

@@ -51,13 +51,11 @@ export default function Problem() {
               </span>
             </h2>
           </AnimItem>
-
           <AnimItem variant={fadeUp}>
             <p className="text-slate-400 text-center max-w-2xl mx-auto mb-16 text-lg">
               Most nonprofits we talk to are stuck in the same place:
             </p>
           </AnimItem>
-
           {/* Pain cards */}
           <motion.div
             initial="hidden"
@@ -102,6 +100,13 @@ export default function Problem() {
               </p>
             </motion.div>
           </motion.div>
+          <AnimItem variant={fadeUp}>
+            <div className="flex justify-center mt-12 mb-8">
+              <button className="btn-primary text-lg !py-4 !px-8">
+                Check My Eligibility →
+              </button>
+            </div>
+          </AnimItem>{" "}
         </AnimSection>
       </div>
 
