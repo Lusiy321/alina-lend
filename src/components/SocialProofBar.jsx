@@ -24,7 +24,7 @@ export default function SocialProofBar() {
     <section className="relative py-12 bg-[#f0eee6] border-y border-[#ebe9e0] overflow-hidden">
       <AnimSection>
         <AnimItem variant={fadeIn}>
-          <p className="text-center text-slate-500 text-xs font-semibold tracking-[0.2em] uppercase mb-8">
+          <p className="text-center text-slate-500 text-lg font-semibold tracking-[0.2em] uppercase mb-8">
             Trusted by 200+ nonprofits across the US
           </p>
         </AnimItem>
@@ -38,7 +38,7 @@ export default function SocialProofBar() {
               key={i}
               className="mx-4 px-5 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.06] whitespace-nowrap"
             >
-              <span className="text-slate-300 text-sm font-medium">{name}</span>
+              <span className="text-slate-300 text-lg font-medium">{name}</span>
             </div>
           ))}
         </div>
@@ -82,10 +82,10 @@ export default function SocialProofBar() {
           >
             {badge.icon}
             <div>
-              <div className="text-white font-bold text-sm leading-tight">
+              <div className="text-white font-bold text-lg leading-tight">
                 {badge.title}
               </div>
-              <div className="text-slate-400 text-xs">{badge.sub}</div>
+              <div className="text-slate-400 text-lg">{badge.sub}</div>
             </div>
           </motion.div>
         ))}

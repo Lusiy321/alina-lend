@@ -26,7 +26,7 @@ function CounterStat({ end, prefix = "", suffix = "", label, decimals = 0 }) {
         {decimals > 0 ? count.toFixed(decimals) : count.toLocaleString()}
         {suffix}
       </div>
-      <div className="text-slate-400 text-sm font-medium">{label}</div>
+      <div className="text-slate-400 text-lg font-medium">{label}</div>
     </div>
   );
 }
@@ -256,11 +256,11 @@ export default function Opportunity() {
                   <div className="w-6 h-6 rounded-md bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
                     <Search size={12} className="text-emerald-400" />
                   </div>
-                  <span className="text-slate-300 text-sm font-mono">
+                  <span className="text-slate-300 text-lg font-mono">
                     {query}
                   </span>
                   <div className="ml-auto">
-                    <span className="text-xs text-emerald-400 font-medium bg-emerald-500/10 px-2 py-0.5 rounded-full">
+                    <span className="text-lg text-emerald-400 font-medium bg-emerald-500/10 px-2 py-0.5 rounded-full">
                       Ad
                     </span>
                   </div>
@@ -290,19 +290,19 @@ export default function Opportunity() {
                 <div className="text-slate-300 text-lg font-semibold mb-1">
                   per month in free ads
                 </div>
-                <div className="text-slate-500 text-sm">
+                <div className="text-slate-500 text-lg">
                   Google funds it completely
                 </div>
                 <div className="mt-5 pt-5 border-t border-white/[0.06] grid grid-cols-2 gap-4">
                   <div>
                     <div className="text-2xl font-black text-white">$120K</div>
-                    <div className="text-slate-400 text-xs mt-0.5">
+                    <div className="text-slate-400 text-lg mt-0.5">
                       per year total value
                     </div>
                   </div>
                   <div>
                     <div className="text-2xl font-black text-white">$0</div>
-                    <div className="text-slate-400 text-xs mt-0.5">
+                    <div className="text-slate-400 text-lg mt-0.5">
                       ad spend from you
                     </div>
                   </div>
@@ -375,7 +375,7 @@ export default function Opportunity() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center text-slate-400 text-xs font-semibold tracking-[0.2em] uppercase mb-10"
+              className="text-center text-slate-400 text-lg font-semibold tracking-[0.2em] uppercase mb-10"
             >
               Here's what it looks like in Google Search
             </motion.p>

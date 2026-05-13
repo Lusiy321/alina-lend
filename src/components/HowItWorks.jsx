@@ -85,7 +85,7 @@ export default function HowItWorks() {
                 {/* Connector dot */}
                 <div className="absolute left-0 sm:left-1/2 sm:-translate-x-1/2 w-12 h-12 hidden sm:flex items-center justify-center z-10">
                   <div
-                    className="w-10 h-10 rounded-full flex items-center justify-center font-black text-sm text-white shadow-lg"
+                    className="w-10 h-10 rounded-full flex items-center justify-center font-black text-lg text-white shadow-lg"
                     style={{
                       background: step.bg,
                       boxShadow: `0 0 20px ${step.glowColor}`,
@@ -105,14 +105,14 @@ export default function HowItWorks() {
                   >
                     {/* Mobile step number */}
                     <div
-                      className="sm:hidden w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-sm mb-4"
+                      className="sm:hidden w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-lg mb-4"
                       style={{ background: step.bg }}
                     >
                       {step.step}
                     </div>
 
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-white/[0.05] border border-white/[0.08] text-slate-400">
+                      <span className="text-lg font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-white/[0.05] border border-white/[0.08] text-slate-400">
                         {step.time}
                       </span>
                     </div>

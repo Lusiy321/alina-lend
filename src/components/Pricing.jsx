@@ -81,7 +81,7 @@ export default function Pricing() {
               >
                 <div className="flex items-start justify-between gap-4 flex-wrap">
                   <div>
-                    <div className="text-slate-400 text-xs font-bold tracking-widest uppercase mb-2">
+                    <div className="text-slate-400 text-lg font-bold tracking-widest uppercase mb-2">
                       Complete Management Plan
                     </div>
                     <h3 className="text-white text-lg font-black">
@@ -92,22 +92,22 @@ export default function Pricing() {
                       — just $250/mo.
                     </p>
                     <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-red-500/15 border border-red-400/25">
-                      <span className="text-slate-300 text-xs font-bold">
+                      <span className="text-slate-300 text-lg font-bold">
                         ⏱️ Offer expires in
                       </span>
-                      <span className="text-white font-mono text-sm font-black">
+                      <span className="text-white font-mono text-lg font-black">
                         {formatTime(timeLeft)}
                       </span>
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-white/70 text-sm line-through mb-0.5">
+                    <div className="text-white/70 text-lg line-through mb-0.5">
                       $1,250/mo
                     </div>
                     <div className="text-white font-black text-4xl leading-none">
                       $250<span className="text-lg font-semibold">/mo</span>
                     </div>
-                    <div className="text-emerald-400 text-xs mt-1">
+                    <div className="text-emerald-400 text-lg mt-1">
                       after free grant setup
                     </div>
                   </div>
@@ -130,7 +130,7 @@ export default function Pricing() {
                         size={16}
                         className="text-emerald-400 flex-shrink-0 mt-0.5"
                       />
-                      <span className="text-slate-300 text-sm">{item}</span>
+                      <span className="text-slate-300 text-lg">{item}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -211,13 +211,13 @@ export default function Pricing() {
                 >
                   🔴 {spotsLeft}
                 </motion.span>
-                <span className="text-red-400 font-bold text-sm">
+                <span className="text-red-400 font-bold text-lg">
                   spots remaining this month
                 </span>
               </div>
 
               <div className="flex items-center gap-2 mb-6">
-                <span className="text-slate-400 font-bold text-sm">
+                <span className="text-slate-400 font-bold text-lg">
                   ⏱️ Offer expires in{" "}
                   <span className="font-mono text-white text-base">
                     {formatTime(timeLeft)}
@@ -237,7 +237,7 @@ export default function Pricing() {
                   → Start My Free Period
                 </button>
               </div>
-              <p className="text-center text-slate-500 text-xs">
+              <p className="text-center text-slate-500 text-lg">
                 No credit card required · Cancel anytime · 30-day notice
               </p>
             </div>

@@ -26,7 +26,7 @@ export default function Footer() {
 
           {/* Contacts */}
           <div className="flex flex-col gap-3 lg:text-right">
-            <div className="flex items-center gap-2 text-sm text-slate-500 lg:flex-row-reverse lg:justify-end">
+            <div className="flex items-center gap-2 text-lg text-slate-500 lg:flex-row-reverse lg:justify-end">
               <Mail size={14} className="text-emerald-500/60" />
               <a
                 href="mailto:nonprofit@dgtl-house.com"
@@ -35,7 +35,7 @@ export default function Footer() {
                 nonprofit@dgtl-house.com
               </a>
             </div>
-            <div className="flex items-center gap-2 text-sm text-slate-500 lg:flex-row-reverse lg:justify-end">
+            <div className="flex items-center gap-2 text-lg text-slate-500 lg:flex-row-reverse lg:justify-end">
               <MapPin size={14} className="text-emerald-500/60" />
               <span>United States · Remote Team</span>
             </div>
@@ -44,10 +44,10 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/[0.05] flex flex-wrap items-center justify-between gap-4">
-          <p className="text-slate-600 text-xs">
+          <p className="text-slate-600 text-lg">
             © {year} DGTL-House Agency. All rights reserved.
           </p>
-          <div className="flex items-center gap-4 text-xs text-slate-600">
+          <div className="flex items-center gap-4 text-lg text-slate-600">
             <span className="flex items-center gap-1.5">
               Google Ad Grants Certified Partner
             </span>

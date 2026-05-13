@@ -160,15 +160,15 @@ export default function Credibility() {
                   }}
                 />
                 <div
-                  className={`w-12 h-12 rounded-full bg-gradient-to-br ${t.color} items-center justify-center text-white font-bold text-sm flex-shrink-0 hidden`}
+                  className={`w-12 h-12 rounded-full bg-gradient-to-br ${t.color} items-center justify-center text-white font-bold text-lg flex-shrink-0 hidden`}
                 >
                   {t.avatar}
                 </div>
                 <div>
-                  <div className="text-white font-bold text-sm leading-tight">
+                  <div className="text-white font-bold text-lg leading-tight">
                     {t.name}
                   </div>
-                  <div className="text-slate-400 text-xs mt-0.5">
+                  <div className="text-slate-400 text-lg mt-0.5">
                     {t.role}, {t.company}
                   </div>
                 </div>
@@ -204,7 +204,7 @@ export default function Credibility() {
                     </svg>
                   ))}
                 </div>
-                <span className="text-slate-300 text-sm font-semibold">
+                <span className="text-slate-300 text-lg font-semibold">
                   {t.rating.toFixed(1)}
                 </span>
               </div>
@@ -242,7 +242,7 @@ export default function Credibility() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: i * 0.05 }}
                     viewport={{ once: true }}
-                    className={`px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/15 text-sm font-medium hover:bg-emerald-500/20 transition-colors cursor-default ${i === 2 ? "font-bold" : "text-slate-400"}`}
+                    className={`px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/15 text-lg font-medium hover:bg-emerald-500/20 transition-colors cursor-default ${i === 2 ? "font-bold" : "text-slate-400"}`}
                     style={
                       i === 2 ? { color: "#52504c", fontWeight: "bold" } : {}
                     }

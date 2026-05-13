@@ -66,7 +66,7 @@ export default function Solution() {
                       <div className="w-6 h-6 rounded-md bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-emerald-500/25 transition-colors">
                         <CheckCircle size={14} className="text-emerald-400" />
                       </div>
-                      <span className="text-slate-300 text-sm leading-relaxed">
+                      <span className="text-slate-300 text-lg leading-relaxed">
                         {s.text}
                       </span>
                     </motion.div>
@@ -99,7 +99,7 @@ export default function Solution() {
                     <p className="text-blue-300 text-lg font-semibold mb-2">
                       Included in your onboarding:
                     </p>
-                    <ul className="space-y-1.5 text-slate-400 text-sm">
+                    <ul className="space-y-1.5 text-slate-400 text-lg">
                       {[
                         "Clean, fast, mobile-optimized site",
                         "Google guidelines compliant",
@@ -132,14 +132,14 @@ export default function Solution() {
                     ].map((item, i) => (
                       <div
                         key={i}
-                        className="flex items-center gap-2.5 text-slate-400 text-sm"
+                        className="flex items-center gap-2.5 text-slate-400 text-lg"
                       >
                         <span className="text-red-500/70 text-base">✗</span>
                         <span className="line-through opacity-60">{item}</span>
                       </div>
                     ))}
                   </div>
-                  <div className="mt-4 pt-4 border-t border-white/[0.06] text-emerald-400 text-sm font-semibold">
+                  <div className="mt-4 pt-4 border-t border-white/[0.06] text-emerald-400 text-lg font-semibold">
                     You need less than 2 hours/month from your team. We handle
                     the rest.
                   </div>

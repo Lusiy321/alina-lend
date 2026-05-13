@@ -59,7 +59,7 @@ export default function Header() {
             <button
               key={link.label}
               onClick={() => handleNav(link.href)}
-              className="px-4 py-2 text-slate-300 hover:text-white text-sm font-medium rounded-lg hover:bg-white/[0.06] transition-all duration-200"
+              className="px-4 py-2 text-slate-300 hover:text-white text-lg font-medium rounded-lg hover:bg-white/[0.06] transition-all duration-200"
             >
               {link.label}
             </button>
@@ -102,7 +102,7 @@ export default function Header() {
                 <button
                   key={link.label}
                   onClick={() => handleNav(link.href)}
-                  className="text-left px-4 py-3 text-slate-300 hover:text-white font-medium rounded-lg hover:bg-white/[0.06] transition-all"
+                  className="text-left px-4 py-3 text-slate-300 hover:text-white text-lg font-medium rounded-lg hover:bg-white/[0.06] transition-all"
                 >
                   {link.label}
                 </button>

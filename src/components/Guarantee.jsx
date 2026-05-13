@@ -39,7 +39,7 @@ export default function Guarantee() {
 
                 {/* Label */}
                 <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-7">
-                  <span className="text-emerald-400 text-xs font-bold tracking-widest uppercase">
+                  <span className="text-emerald-400 text-lg font-bold tracking-widest uppercase">
                     Our Guarantee
                   </span>
                 </div>
@@ -96,7 +96,7 @@ export default function Guarantee() {
                       >
                         {item.title}
                       </div>
-                      <div className="text-slate-400 text-xs leading-relaxed">
+                      <div className="text-slate-400 text-lg leading-relaxed">
                         {item.desc}
                       </div>
                     </motion.div>

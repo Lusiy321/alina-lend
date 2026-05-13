@@ -76,7 +76,7 @@ export default function Hero() {
                       fill="#EA4335"
                     />
                   </svg>
-                  <span className="text-[#161514] text-sm font-semibold tracking-wide">
+                  <span className="text-[#161514] text-lg font-semibold tracking-wide">
                     Google for Nonprofits Partners
                   </span>
                 </div>
@@ -129,13 +129,13 @@ export default function Hero() {
                 <div className="flex flex-col items-center gap-3 mb-10">
                   <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#aac976] border border-[#aac976]">
                     <span>🎁</span>
-                    <span className="text-[#2d3a1c] text-sm font-bold">
+                    <span className="text-[#2d3a1c] text-lg font-bold">
                       We get you the Google Grant — for free
                     </span>
                   </div>
                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-100 border border-slate-200">
                     <Clock size={16} className="text-yellow-400" />
-                    <span className="text-slate-600 text-sm font-medium">
+                    <span className="text-slate-600 text-lg font-medium">
                       Grant live in as little as{" "}
                       <strong className="text-[#161514]">2 weeks</strong>
                     </span>
@@ -191,7 +191,7 @@ export default function Hero() {
                       <div className="text-3xl sm:text-4xl font-black gradient-text mb-1">
                         {stat.value}
                       </div>
-                      <div className="text-slate-500 text-xs sm:text-sm font-medium">
+                      <div className="text-slate-500 text-lg font-medium">
                         {stat.label}
                       </div>
                     </div>
