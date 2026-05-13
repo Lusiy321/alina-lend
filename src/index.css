@@ -217,13 +217,13 @@ samp {
 /* --------- Buttons (pill-shape, lime accent like reference) --------- */
 
 .btn-primary {
-    background: #c4ed82;
+    background: #b5e550;
     color: #3f5028;
     font-family: "Lexend", sans-serif;
     font-weight: 600;
     padding: 14px 28px;
     border-radius: 999px;
-    border: 1px solid #c4ed82;
+    border: 1px solid #b5e550;
     cursor: pointer;
     transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
     display: inline-flex;
@@ -244,8 +244,8 @@ samp {
 }
 
 .btn-primary:hover {
-    background: #aac976;
-    border-color: #aac976;
+    background: #a3d444;
+    border-color: #a3d444;
     transform: translateY(-2px);
     box-shadow: 0 12px 28px rgba(170, 201, 118, 0.4);
 }

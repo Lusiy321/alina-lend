@@ -47,7 +47,7 @@ export default function Pricing() {
   };
 
   return (
-    <section id="pricing" className="relative py-24 sm:py-32 overflow-hidden">
+    <section id="pricing" className="relative py-8 sm:py-32 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-500/[0.03] to-transparent pointer-events-none" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-emerald-500/8 rounded-full blur-[180px] pointer-events-none" />
 
@@ -239,15 +239,13 @@ export default function Pricing() {
                   → Start My Free Period
                 </button>
               </div>
-              <p className="text-center text-slate-500 text-lg">
+              <p className="text-center text-slate-500 text-sm sm:text-lg">
                 No credit card required · Cancel anytime · 30-day notice
               </p>
             </div>
           </AnimItem>
         </AnimSection>
       </div>
-
-      <div className="section-divider mx-auto max-w-6xl mt-16" />
     </section>
   );
 }
