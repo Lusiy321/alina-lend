@@ -231,10 +231,16 @@ samp {
     justify-content: center;
     gap: 10px;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 16px;
     letter-spacing: -0.01em;
     position: relative;
     overflow: hidden;
+}
+
+@media (min-width: 640px) {
+    .btn-primary {
+        font-size: 24px;
+    }
 }
 
 .btn-primary:hover {
@@ -259,7 +265,13 @@ samp {
     justify-content: center;
     gap: 10px;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 16px;
+}
+
+@media (min-width: 640px) {
+    .btn-secondary {
+        font-size: 24px;
+    }
 }
 
 .btn-secondary:hover {

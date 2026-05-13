@@ -112,7 +112,7 @@ export default function Header() {
                   href="https://api.dgtl-house.com/widget/bookings/dgtlhouse-nonprofits"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary w-full justify-center !text-lg !py-2.5 !px-5"
+                  className="btn-primary w-full justify-center !py-2.5 !px-5"
                 >
                   Schedule call
                   <ChevronRight size={16} />
