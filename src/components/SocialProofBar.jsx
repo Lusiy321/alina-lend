@@ -78,7 +78,7 @@ export default function SocialProofBar() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
             viewport={{ once: true }}
-            className={`flex items-center gap-3 px-5 py-3 rounded-xl bg-gradient-to-br ${badge.color} border`}
+            className={`flex items-center gap-3 px-5 py-3 rounded-xl bg-gradient-to-br ${badge.color} border w-56 sm:w-64`}
           >
             {badge.icon}
             <div>
