@@ -26,8 +26,7 @@ export default function Footer() {
 
           {/* Contacts */}
           <div className="flex flex-col gap-3 lg:text-right">
-            <div className="flex items-center gap-2 text-lg text-slate-500 lg:flex-row-reverse lg:justify-end">
-              <Mail size={14} className="text-emerald-500/60" />
+            <div className="text-lg text-slate-500">
               <a
                 href="mailto:nonprofit@dgtl-house.com"
                 className="hover:text-emerald-400 transition-colors"
@@ -35,9 +34,9 @@ export default function Footer() {
                 nonprofit@dgtl-house.com
               </a>
             </div>
-            <div className="flex items-center gap-2 text-lg text-slate-500 lg:flex-row-reverse lg:justify-end">
-              <MapPin size={14} className="text-emerald-500/60" />
-              <span>United States · Remote Team</span>
+            <div className="text-lg text-slate-500">1 (224) 584 8401</div>
+            <div className="text-lg text-slate-500">
+              1635 Eagle Grove Ct. Wheeling, IL 60090
             </div>
           </div>
         </div>
