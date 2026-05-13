@@ -52,7 +52,7 @@ export default function Problem() {
             </h2>
           </AnimItem>
           <AnimItem variant={fadeUp}>
-            <p className="text-slate-400 text-center max-w-2xl mx-auto mb-16 text-2xl">
+            <p className="text-slate-400 text-center max-w-2xl mx-auto mb-16 text-base sm:text-lg lg:text-2xl">
               Most nonprofits we talk to are stuck in the same place:
             </p>
           </AnimItem>
@@ -73,10 +73,10 @@ export default function Problem() {
                 <div className="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   {pain.icon}
                 </div>
-                <h3 className="text-white font-bold text-lg mb-2">
+                <h3 className="text-white font-bold text-base sm:text-lg mb-2">
                   {pain.title}
                 </h3>
-                <p className="text-slate-400 text-lg leading-relaxed">
+                <p className="text-slate-400 text-sm sm:text-lg leading-relaxed">
                   {pain.desc}
                 </p>
               </motion.div>
@@ -87,7 +87,7 @@ export default function Problem() {
               variants={fadeUp}
               className="sm:col-span-2 lg:col-span-3 rounded-2xl p-6 bg-gradient-to-r from-red-500/10 via-orange-500/5 to-red-500/10 border border-red-500/15"
             >
-              <p className="text-slate-200 text-center text-lg font-medium leading-relaxed">
+              <p className="text-slate-200 text-center text-sm sm:text-lg font-medium leading-relaxed">
                 Your mission is clear.{" "}
                 <span className="text-red-400 font-bold">
                   The problem? The people who need you can't find you.
@@ -99,7 +99,7 @@ export default function Problem() {
             <div className="flex justify-center mt-12 mb-8">
               <a
                 href="#contact-form"
-                className="btn-primary text-2xl !py-4 !px-8"
+                className="btn-primary text-base sm:text-2xl !py-3 sm:!py-4 !px-6 sm:!px-8"
               >
                 Check My Eligibility →
               </a>

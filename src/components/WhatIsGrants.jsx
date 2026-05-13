@@ -19,7 +19,7 @@ export default function WhatIsGrants() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white text-center max-w-4xl mx-auto leading-tight mb-4">
               What Is Google Ad Grants?
             </h2>
-            <p className="text-slate-400 text-center text-2xl mb-14 max-w-xl mx-auto">
+            <p className="text-slate-400 text-center text-base sm:text-lg lg:text-2xl mb-14 max-w-xl mx-auto">
               And why your nonprofit should care.
             </p>
           </AnimItem>
@@ -61,10 +61,10 @@ export default function WhatIsGrants() {
                       />
                     </div>
                     <div>
-                      <h3 className="text-white font-bold text-lg mb-2">
+                      <h3 className="text-white font-bold text-base sm:text-lg mb-2">
                         {item.title}
                       </h3>
-                      <p className="text-slate-400 text-lg leading-relaxed">
+                      <p className="text-slate-400 text-sm sm:text-lg leading-relaxed">
                         {item.text}
                       </p>
                     </div>
@@ -160,7 +160,7 @@ export default function WhatIsGrants() {
         <div className="mt-12 flex justify-center">
           <button
             onClick={scrollToEligibility}
-            className="btn-primary text-2xl !py-4 !px-8"
+            className="btn-primary text-base sm:text-2xl !py-3 sm:!py-4 !px-6 sm:!px-8"
           >
             Check My Eligibility →
           </button>

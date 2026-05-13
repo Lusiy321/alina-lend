@@ -76,7 +76,7 @@ export default function Hero() {
                       fill="#EA4335"
                     />
                   </svg>
-                  <span className="text-[#161514] text-lg font-semibold tracking-wide">
+                  <span className="text-[#161514] text-base sm:text-lg font-semibold tracking-wide">
                     Google for Nonprofits Partners
                   </span>
                 </div>
@@ -103,7 +103,7 @@ export default function Hero() {
               <div className="flex-1 min-w-0 flex flex-col justify-center">
                 {/* Main headline */}
                 <AnimItem variant={fadeUp}>
-                  <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.08] tracking-tight mb-6 text-center lg:text-left">
+                  <h1 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-black leading-[1.08] tracking-tight mb-6 text-center lg:text-left">
                     <span className="text-[#161514]">
                       Get a Free $10,000/Month Google Grant for Your Nonprofit —
                       Guaranteed.
@@ -113,7 +113,7 @@ export default function Hero() {
 
                 {/* Subheadline */}
                 <AnimItem variant={fadeUp}>
-                  <p className="text-2xl text-[#52504C] leading-relaxed text-center lg:text-left">
+                  <p className="text-base sm:text-lg lg:text-2xl text-[#52504C] leading-relaxed text-center lg:text-left">
                     We handle Google Ad Grants end-to-end — so more donors,
                     volunteers, and partners find you. At $0 ad spend.{" "}
                     <strong className="text-[#52504C]">$0 ad spend.</strong>
@@ -127,15 +127,15 @@ export default function Hero() {
               {/* Free grant + timeline pills */}
               <AnimItem variant={fadeUp}>
                 <div className="flex flex-col items-center gap-3 mb-10">
-                  <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#aac976] border border-[#aac976]">
+                  <div className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-[#aac976] border border-[#aac976]">
                     <span>🎁</span>
-                    <span className="text-[#2d3a1c] text-lg font-bold">
+                    <span className="text-[#2d3a1c] text-base sm:text-lg font-bold">
                       We get you the Google Grant — for free
                     </span>
                   </div>
                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-100 border border-slate-200">
                     <Clock size={16} className="text-yellow-400" />
-                    <span className="text-slate-600 text-lg font-medium">
+                    <span className="text-slate-600 text-base sm:text-lg font-medium">
                       Grant live in as little as{" "}
                       <strong className="text-[#161514]">2 weeks</strong>
                     </span>
@@ -147,7 +147,7 @@ export default function Hero() {
                 <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
                   <button
                     onClick={scrollToEligibility}
-                    className="btn-primary text-2xl !py-4 !px-8"
+                    className="btn-primary text-base sm:text-2xl !py-3 sm:!py-4 !px-6 sm:!px-8"
                   >
                     Check My Eligibility →
                   </button>
@@ -157,7 +157,7 @@ export default function Hero() {
                         .querySelector("#opportunity")
                         ?.scrollIntoView({ behavior: "smooth" })
                     }
-                    className="btn-secondary text-2xl !py-3.5 !px-7"
+                    className="btn-secondary text-base sm:text-2xl !py-2.5 sm:!py-3.5 !px-6 sm:!px-7"
                   >
                     See How It Works
                   </button>
@@ -167,13 +167,13 @@ export default function Hero() {
               <AnimItem variant={fadeIn}>
                 <div className="flex flex-wrap items-center justify-center gap-6 mb-10">
                   <div className="flex items-center gap-2">
-                    <span className="text-emerald-400 text-base font-bold">
+                    <span className="text-emerald-400 text-sm sm:text-base font-bold">
                       Fully done-for-you
                     </span>
                   </div>
                   <div className="w-2 h-2 rounded-full bg-slate-400" />
                   <div className="flex items-center gap-2">
-                    <span className="text-emerald-400 text-base font-bold">
+                    <span className="text-emerald-400 text-sm sm:text-base font-bold">
                       Cancel anytime
                     </span>
                   </div>
@@ -188,10 +188,10 @@ export default function Hero() {
                     { value: "30d", label: "To first results" },
                   ].map((stat, i) => (
                     <div key={i} className="text-center">
-                      <div className="text-3xl sm:text-4xl font-black gradient-text mb-1">
+                      <div className="text-2xl sm:text-3xl lg:text-4xl font-black gradient-text mb-1">
                         {stat.value}
                       </div>
-                      <div className="text-slate-500 text-lg font-medium">
+                      <div className="text-slate-500 text-sm sm:text-base lg:text-lg font-medium">
                         {stat.label}
                       </div>
                     </div>

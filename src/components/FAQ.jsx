@@ -72,7 +72,7 @@ function FAQItem({ q, a, isOpen, onToggle }) {
         className="w-full flex items-center justify-between gap-4 py-5 text-left group"
       >
         <span
-          className={`font-semibold text-base transition-colors duration-300 ${isOpen ? "text-emerald-400" : "text-white group-hover:text-emerald-300"}`}
+          className={`font-semibold text-sm sm:text-base transition-colors duration-300 ${isOpen ? "text-emerald-400" : "text-white group-hover:text-emerald-300"}`}
         >
           {q}
         </span>
@@ -96,7 +96,9 @@ function FAQItem({ q, a, isOpen, onToggle }) {
             transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
             className="overflow-hidden"
           >
-            <p className="text-slate-400 text-lg leading-relaxed pb-5">{a}</p>
+            <p className="text-slate-400 text-sm sm:text-lg leading-relaxed pb-5">
+              {a}
+            </p>
           </motion.div>
         )}
       </AnimatePresence>

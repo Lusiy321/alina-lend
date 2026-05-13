@@ -44,7 +44,7 @@ export default function FinalCTA() {
               <AnimItem variant={fadeUp}>
                 <div className="flex items-center gap-2 mb-6">
                   <div className="w-2 h-2 rounded-full bg-red-400 pulse-green" />
-                  <span className="text-red-400 text-lg font-bold">
+                  <span className="text-red-400 text-base sm:text-lg font-bold">
                     4 spots remaining this month
                   </span>
                 </div>
@@ -73,7 +73,7 @@ export default function FinalCTA() {
                       <div className="w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
                         <CheckCircle size={12} className="text-emerald-400" />
                       </div>
-                      <span className="text-slate-200 font-medium text-lg">
+                      <span className="text-slate-200 font-medium text-base sm:text-lg">
                         {g}
                       </span>
                     </motion.div>
@@ -114,10 +114,10 @@ export default function FinalCTA() {
                     ))}
                   </div>
                   <div>
-                    <div className="text-white font-semibold text-lg">
+                    <div className="text-white font-semibold text-base sm:text-lg">
                       200+ nonprofits already growing
                     </div>
-                    <div className="text-slate-500 text-lg">
+                    <div className="text-slate-500 text-sm sm:text-lg">
                       Join them today
                     </div>
                   </div>

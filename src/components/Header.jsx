@@ -59,7 +59,7 @@ export default function Header() {
             <button
               key={link.label}
               onClick={() => handleNav(link.href)}
-              className="px-4 py-2 text-slate-300 hover:text-white text-lg font-medium rounded-lg hover:bg-white/[0.06] transition-all duration-200"
+              className="px-4 py-2 text-slate-300 hover:text-white text-base sm:text-lg font-medium rounded-lg hover:bg-white/[0.06] transition-all duration-200"
             >
               {link.label}
             </button>

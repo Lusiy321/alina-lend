@@ -61,7 +61,7 @@ export default function HowItWorks() {
               From "I'm Interested" to{" "}
               <span className="text-white">Live Campaigns in 30 Days.</span>
             </h2>
-            <p className="text-slate-400 text-center max-w-xl mx-auto mb-16">
+            <p className="text-slate-400 text-center max-w-xl mx-auto mb-16 text-sm sm:text-base">
               A clear, simple process — we handle everything, you get results.
             </p>
           </AnimItem>
@@ -116,10 +116,10 @@ export default function HowItWorks() {
                         {step.time}
                       </span>
                     </div>
-                    <h3 className="text-white font-bold text-lg mb-3">
+                    <h3 className="text-white font-bold text-base sm:text-lg mb-3">
                       {step.title}
                     </h3>
-                    <p className="text-slate-400 text-lg leading-relaxed">
+                    <p className="text-slate-400 text-sm sm:text-lg leading-relaxed">
                       {step.desc}
                     </p>
                   </motion.div>
@@ -133,7 +133,7 @@ export default function HowItWorks() {
         <AnimSection>
           <AnimItem variant={fadeUp}>
             <div className="mt-14 glass-card rounded-2xl p-6 sm:p-8 text-center">
-              <p className="text-white text-lg font-bold mb-2">
+              <p className="text-white text-base sm:text-lg font-bold mb-2">
                 Total time from first contact to live campaigns:
               </p>
               <p className="text-5xl font-black gradient-text mb-3">~30 days</p>
@@ -152,7 +152,7 @@ export default function HowItWorks() {
               .querySelector("#contact-form")
               ?.scrollIntoView({ behavior: "smooth" })
           }
-          className="btn-primary text-2xl !py-4 !px-8"
+          className="btn-primary text-base sm:text-2xl !py-3 sm:!py-4 !px-6 sm:!px-8"
         >
           Check My Eligibility →
           <ChevronRight size={18} />

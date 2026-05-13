@@ -39,7 +39,7 @@ export default function Guarantee() {
 
                 {/* Label */}
                 <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-7">
-                  <span className="text-emerald-400 text-lg font-bold tracking-widest uppercase">
+                  <span className="text-emerald-400 text-base sm:text-lg font-bold tracking-widest uppercase">
                     Our Guarantee
                   </span>
                 </div>
@@ -48,7 +48,7 @@ export default function Guarantee() {
                   Grant First. Payment After.
                 </h2>
 
-                <p className="text-slate-300 text-2xl max-w-2xl mx-auto mb-8 leading-relaxed">
+                <p className="text-slate-300 text-base sm:text-2xl max-w-2xl mx-auto mb-8 leading-relaxed">
                   We secure your Google Ad Grant at no cost — you only pay once
                   we're managing your live campaigns.
                 </p>
@@ -92,18 +92,18 @@ export default function Guarantee() {
                         <item.icon size={20} className={item.color} />
                       </div>
                       <div
-                        className={`font-bold text-base mb-2.5 ${item.color}`}
+                        className={`font-bold text-sm sm:text-base mb-2.5 ${item.color}`}
                       >
                         {item.title}
                       </div>
-                      <div className="text-slate-400 text-lg leading-relaxed">
+                      <div className="text-slate-400 text-sm sm:text-lg leading-relaxed">
                         {item.desc}
                       </div>
                     </motion.div>
                   ))}
                 </div>
 
-                <p className="text-slate-400 text-lg italic mb-8">
+                <p className="text-slate-400 text-sm sm:text-lg italic mb-8">
                   "We get you the grant first — then you decide if you want us
                   to grow it."
                 </p>
@@ -114,7 +114,7 @@ export default function Guarantee() {
                       .querySelector("#contact-form")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                  className="btn-primary text-2xl !py-4 !px-8 mx-auto"
+                  className="btn-primary text-base sm:text-2xl !py-3 sm:!py-4 !px-6 sm:!px-8 mx-auto"
                 >
                   Claim My Free Period →
                   <ChevronRight size={18} />

@@ -81,33 +81,33 @@ export default function Pricing() {
               >
                 <div className="flex items-start justify-between gap-4 flex-wrap">
                   <div>
-                    <div className="text-slate-400 text-lg font-bold tracking-widest uppercase mb-2">
+                    <div className="text-slate-400 text-sm sm:text-base font-bold tracking-widest uppercase mb-2">
                       Complete Management Plan
                     </div>
-                    <h3 className="text-white text-lg font-black">
+                    <h3 className="text-white text-base sm:text-lg font-black">
                       Full Google Ad Grants Service
                     </h3>
-                    <p className="text-slate-300 text-lg mt-2 max-w-xs">
+                    <p className="text-slate-300 text-sm sm:text-lg mt-2 max-w-xs">
                       Most agencies charge $1,000+/mo for this. This month only
                       — just $250/mo.
                     </p>
                     <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-red-500/15 border border-red-400/25">
-                      <span className="text-slate-300 text-lg font-bold">
+                      <span className="text-slate-300 text-sm sm:text-lg font-bold">
                         ⏱️ Offer expires in
                       </span>
-                      <span className="text-white font-mono text-lg font-black">
+                      <span className="text-white font-mono text-sm sm:text-lg font-black">
                         {formatTime(timeLeft)}
                       </span>
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-white/70 text-lg line-through mb-0.5">
+                    <div className="text-white/70 text-sm sm:text-lg line-through mb-0.5">
                       $1,250/mo
                     </div>
-                    <div className="text-white font-black text-4xl leading-none">
+                    <div className="text-white font-black text-3xl sm:text-4xl leading-none">
                       $250<span className="text-lg font-semibold">/mo</span>
                     </div>
-                    <div className="text-emerald-400 text-lg mt-1">
+                    <div className="text-emerald-400 text-sm sm:text-lg mt-1">
                       after free grant setup
                     </div>
                   </div>
@@ -130,7 +130,9 @@ export default function Pricing() {
                         size={16}
                         className="text-emerald-400 flex-shrink-0 mt-0.5"
                       />
-                      <span className="text-slate-300 text-lg">{item}</span>
+                      <span className="text-slate-300 text-sm sm:text-lg">
+                        {item}
+                      </span>
                     </motion.div>
                   ))}
                 </div>
@@ -138,10 +140,10 @@ export default function Pricing() {
                 {/* Grant setup free highlight */}
                 <div className="rounded-2xl p-5 bg-gradient-to-r from-emerald-400/10 to-emerald-600/5 border border-emerald-400/20 text-center mb-6">
                   <div className="text-3xl mb-2">🎁</div>
-                  <div className="text-emerald-400 font-black text-xl mb-1">
+                  <div className="text-emerald-400 font-black text-lg sm:text-xl mb-1">
                     GRANT SETUP — 100% FREE
                   </div>
-                  <p className="text-slate-300 text-lg">
+                  <p className="text-slate-300 text-sm sm:text-lg">
                     We secure your Google Ad Grant at no cost. You only pay once
                     it's live.
                   </p>
@@ -150,7 +152,7 @@ export default function Pricing() {
                 <div className="flex justify-center mt-8 mb-4">
                   <button
                     onClick={scrollToEligibility}
-                    className="btn-primary text-2xl !py-4 !px-8"
+                    className="btn-primary text-base sm:text-2xl !py-3 sm:!py-4 !px-6 sm:!px-8"
                   >
                     → Start My Free Period
                   </button>
@@ -167,10 +169,10 @@ export default function Pricing() {
                   <Zap size={22} className="text-blue-400" />
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-lg mb-2">
+                  <h3 className="text-white font-bold text-base sm:text-lg mb-2">
                     Price Match Guarantee
                   </h3>
-                  <p className="text-slate-300 text-lg leading-relaxed mb-3">
+                  <p className="text-slate-300 text-sm sm:text-lg leading-relaxed mb-3">
                     Found a lower price? We'll beat it. If you find a legitimate
                     registered agency (not a freelancer) offering the same scope
                     of Google Ad Grants management for a lower monthly rate —
@@ -179,7 +181,7 @@ export default function Pricing() {
                       show us the quote. We'll match or beat their price.
                     </strong>
                   </p>
-                  <p className="text-slate-400 text-lg italic">
+                  <p className="text-slate-400 text-sm sm:text-lg italic">
                     Why are we confident? Because we specialize exclusively in
                     Google Ad Grants for nonprofits. Generalist agencies charge
                     the same but deliver less.
@@ -192,10 +194,10 @@ export default function Pricing() {
           {/* Urgency block */}
           <AnimItem variant={fadeUp}>
             <div className="urgency-box p-6 sm:p-8">
-              <h3 className="text-red-400 font-bold text-lg mb-3">
+              <h3 className="text-red-400 font-bold text-base sm:text-lg mb-3">
                 ⚠️ Limited Spots Available
               </h3>
-              <p className="text-slate-300 text-lg leading-relaxed mb-5">
+              <p className="text-slate-300 text-sm sm:text-lg leading-relaxed mb-5">
                 We currently have limited spots open for new nonprofits. Every
                 month without the grant is $10,000 in free advertising you don't
                 get back.
@@ -232,7 +234,7 @@ export default function Pricing() {
                       .querySelector("#contact-form")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                  className="btn-primary text-2xl !py-4 !px-8 mb-3"
+                  className="btn-primary text-base sm:text-2xl !py-3 sm:!py-4 !px-6 sm:!px-8 mb-3"
                 >
                   → Start My Free Period
                 </button>

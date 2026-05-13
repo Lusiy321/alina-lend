@@ -35,7 +35,7 @@ export default function Ownership() {
               Your Account. Your Data.{" "}
               <span className="text-white">Always.</span>
             </h2>
-            <p className="text-slate-400 text-center max-w-2xl mx-auto mb-14">
+            <p className="text-slate-400 text-center max-w-2xl mx-auto mb-14 text-sm sm:text-base">
               We work inside YOUR Google Ad Grants account — not ours. That
               means complete transparency and zero dependency.
             </p>
@@ -59,10 +59,10 @@ export default function Ownership() {
                   {point.icon}
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-lg mb-2">
+                  <h3 className="text-white font-bold text-base sm:text-lg mb-2">
                     {point.title}
                   </h3>
-                  <p className="text-slate-400 text-lg leading-relaxed">
+                  <p className="text-slate-400 text-sm sm:text-lg leading-relaxed">
                     {point.desc}
                   </p>
                 </div>
@@ -78,7 +78,7 @@ export default function Ownership() {
                 .querySelector("#contact-form")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="btn-primary text-2xl !py-4 !px-8"
+            className="btn-primary text-base sm:text-2xl !py-3 sm:!py-4 !px-6 sm:!px-8"
           >
             Check My Eligibility →
             <ChevronRight size={18} />

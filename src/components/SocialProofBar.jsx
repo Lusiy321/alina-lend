@@ -24,7 +24,7 @@ export default function SocialProofBar() {
     <section className="relative py-12 bg-[#f0eee6] border-y border-[#ebe9e0] overflow-hidden">
       <AnimSection>
         <AnimItem variant={fadeIn}>
-          <p className="text-center text-slate-500 text-lg font-semibold tracking-[0.2em] uppercase mb-8">
+          <p className="text-center text-slate-500 text-base sm:text-lg font-semibold tracking-[0.2em] uppercase mb-8">
             Trusted by 200+ nonprofits across the US
           </p>
         </AnimItem>
@@ -38,7 +38,9 @@ export default function SocialProofBar() {
               key={i}
               className="mx-4 px-5 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.06] whitespace-nowrap"
             >
-              <span className="text-slate-300 text-lg font-medium">{name}</span>
+              <span className="text-slate-300 text-sm sm:text-lg font-medium">
+                {name}
+              </span>
             </div>
           ))}
         </div>
@@ -82,10 +84,12 @@ export default function SocialProofBar() {
           >
             {badge.icon}
             <div>
-              <div className="text-white font-bold text-lg leading-tight">
+              <div className="text-white font-bold text-base sm:text-lg leading-tight">
                 {badge.title}
               </div>
-              <div className="text-slate-400 text-lg">{badge.sub}</div>
+              <div className="text-slate-400 text-sm sm:text-lg">
+                {badge.sub}
+              </div>
             </div>
           </motion.div>
         ))}
@@ -99,7 +103,7 @@ export default function SocialProofBar() {
               .querySelector("#credibility")
               ?.scrollIntoView({ behavior: "smooth" })
           }
-          className="btn-secondary text-2xl !py-3 !px-6"
+          className="btn-secondary text-base sm:text-2xl !py-2.5 sm:!py-3.5 !px-6 sm:!px-7"
         >
           View Case Studies
         </button>

@@ -110,7 +110,7 @@ export default function Credibility() {
               We've Done This Before.{" "}
               <span className="text-white">Here's the Proof.</span>
             </h2>
-            <p className="text-slate-400 text-center mb-16 max-w-xl mx-auto">
+            <p className="text-slate-400 text-center mb-16 max-w-xl mx-auto text-sm sm:text-base">
               Real results from real nonprofits.
             </p>
           </AnimItem>
@@ -165,10 +165,10 @@ export default function Credibility() {
                   {t.avatar}
                 </div>
                 <div>
-                  <div className="text-white font-bold text-lg leading-tight">
+                  <div className="text-white font-bold text-base sm:text-lg leading-tight">
                     {t.name}
                   </div>
-                  <div className="text-slate-400 text-lg mt-0.5">
+                  <div className="text-slate-400 text-sm sm:text-lg mt-0.5">
                     {t.role}, {t.company}
                   </div>
                 </div>
@@ -204,13 +204,13 @@ export default function Credibility() {
                     </svg>
                   ))}
                 </div>
-                <span className="text-slate-300 text-lg font-semibold">
+                <span className="text-slate-300 text-base sm:text-lg font-semibold">
                   {t.rating.toFixed(1)}
                 </span>
               </div>
 
               {/* Quote */}
-              <p className="text-slate-300 text-lg leading-relaxed">
+              <p className="text-slate-300 text-sm sm:text-lg leading-relaxed">
                 &ldquo;{t.quote}&rdquo;
               </p>
             </motion.div>
@@ -219,7 +219,7 @@ export default function Credibility() {
         <div className="mt-6 mb-8 flex justify-center">
           <button
             onClick={scrollToEligibility}
-            className="btn-primary text-2xl !py-4 !px-8"
+            className="btn-primary text-base sm:text-2xl !py-3 sm:!py-4 !px-6 sm:!px-8"
           >
             Check My Eligibility →
           </button>
@@ -228,10 +228,10 @@ export default function Credibility() {
         <AnimSection>
           <AnimItem variant={fadeUp}>
             <div className="glass-card rounded-2xl p-7 sm:p-9 mb-10">
-              <h3 className="text-white font-bold text-lg text-center mb-2">
+              <h3 className="text-white font-bold text-base sm:text-lg text-center mb-2">
                 We've worked with nonprofits in:
               </h3>
-              <p className="text-slate-400 text-center text-lg mb-7">
+              <p className="text-slate-400 text-center text-sm sm:text-lg mb-7">
                 Every niche, every mission.
               </p>
               <div className="flex flex-wrap gap-2.5 justify-center">
@@ -242,7 +242,7 @@ export default function Credibility() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: i * 0.05 }}
                     viewport={{ once: true }}
-                    className={`px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/15 text-lg font-medium hover:bg-emerald-500/20 transition-colors cursor-default ${i === 2 ? "font-bold" : "text-slate-400"}`}
+                    className={`px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/15 text-sm sm:text-base font-medium hover:bg-emerald-500/20 transition-colors cursor-default ${i === 2 ? "font-bold" : "text-slate-400"}`}
                     style={
                       i === 2 ? { color: "#52504c", fontWeight: "bold" } : {}
                     }
