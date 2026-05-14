@@ -47,7 +47,7 @@ export default function SocialProofBar() {
       </div>
 
       {/* Certification badges */}
-      <div className="mt-10 flex flex-wrap items-center justify-center gap-4 sm:gap-8 px-4 relative z-20">
+      {/* <div className="mt-10 flex flex-wrap items-center justify-center gap-4 sm:gap-8 px-4 relative z-20">
         {[
           {
             icon: <Award size={24} className="text-yellow-400" />,
@@ -93,21 +93,7 @@ export default function SocialProofBar() {
             </div>
           </motion.div>
         ))}
-      </div>
-
-      {/* CTA Button */}
-      <div className="mt-8 flex justify-center">
-        <button
-          onClick={() =>
-            document
-              .querySelector("#credibility")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
-          className="btn-secondary text-base sm:text-2xl !py-2.5 sm:!py-3.5 !px-6 sm:!px-7"
-        >
-          View Case Studies
-        </button>
-      </div>
+      </div> */}
     </section>
   );
 }

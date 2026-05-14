@@ -229,6 +229,19 @@ export default function Hero() {
               </div>
             </div>
           </div>
+          {/* View Case Studies CTA */}
+          <div className="flex justify-center mt-8 sm:mt-12">
+            <button
+              onClick={() =>
+                document
+                  .querySelector("#credibility")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="btn-secondary text-base sm:text-2xl !py-2.5 sm:!py-3.5 !px-6 sm:!px-7"
+            >
+              View Case Studies
+            </button>
+          </div>
         </AnimSection>
       </div>
     </section>

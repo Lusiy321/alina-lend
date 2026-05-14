@@ -43,7 +43,11 @@ export default function Pricing() {
     const h = Math.floor(seconds / 3600);
     const m = Math.floor((seconds % 3600) / 60);
     const s = seconds % 60;
-    return `${h}:${String(m).padStart(2, "9")}:${String(s).padStart(2, "9")}`;
+    return {
+      h: String(h).padStart(2, "0"),
+      m: String(m).padStart(2, "0"),
+      s: String(s).padStart(2, "0"),
+    };
   };
 
   return (
@@ -87,25 +91,54 @@ export default function Pricing() {
                     <h3 className="text-white text-base sm:text-lg font-black">
                       Full Google Ad Grants Service
                     </h3>
-                    <p className="text-slate-300 text-sm sm:text-lg mt-2 max-w-xs">
-                      Most agencies charge $1,000+/mo for this. This month only
-                      — just $250/mo.
-                    </p>
-                    <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-red-500/15 border border-red-400/25">
-                      <span className="text-slate-300 text-sm sm:text-lg font-bold">
-                        ⏱️ Offer expires in
-                      </span>
-                      <span className="text-white font-mono text-sm sm:text-lg font-black">
-                        {formatTime(timeLeft)}
-                      </span>
+
+                    <div
+                      className="mt-3 inline-flex flex-col items-start gap-1.5 px-4 py-3 rounded-2xl border border-red-500/50 bg-red-500/10"
+                      style={{ boxShadow: "0 0 20px rgba(239,68,68,0.15)" }}
+                    >
+                      <div className="flex items-center gap-1.5">
+                        <span className="relative flex h-2 w-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500" />
+                        </span>
+                        <span className="text-red-400 text-xs font-black tracking-[0.15em] uppercase">
+                          Offer expires in
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        {[
+                          { v: formatTime(timeLeft).h, l: "hr" },
+                          { v: formatTime(timeLeft).m, l: "min" },
+                          { v: formatTime(timeLeft).s, l: "sec" },
+                        ].map(({ v, l }, i) => (
+                          <div key={i} className="flex items-center gap-1">
+                            <div className="flex flex-col items-center">
+                              <span className="font-mono font-black text-2xl sm:text-3xl text-white leading-none">
+                                {v}
+                              </span>
+                              <span className="text-red-400/80 text-[10px] font-bold uppercase tracking-wide mt-0.5">
+                                {l}
+                              </span>
+                            </div>
+                            {i < 2 && (
+                              <span className="text-red-400 font-black text-xl sm:text-2xl leading-none mb-3 mx-0.5">
+                                :
+                              </span>
+                            )}
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                   <div className="text-right">
                     <div className="text-white/70 text-sm sm:text-lg line-through mb-0.5">
                       $1,250/mo
                     </div>
-                    <div className="text-white font-black text-3xl sm:text-4xl leading-none">
-                      $250<span className="text-lg font-semibold">/mo</span>
+                    <div className="text-white font-black text-5xl sm:text-6xl leading-none drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
+                      $250
+                      <span className="text-2xl sm:text-3xl font-semibold">
+                        /mo
+                      </span>
                     </div>
                     <div className="text-emerald-400 text-sm sm:text-lg mt-1">
                       after free grant setup
@@ -222,7 +255,8 @@ export default function Pricing() {
                 <span className="text-slate-400 font-bold text-sm sm:text-lg">
                   ⏱️ Offer expires in{" "}
                   <span className="font-mono text-white text-base">
-                    {formatTime(timeLeft)}
+                    {formatTime(timeLeft).h}:{formatTime(timeLeft).m}:
+                    {formatTime(timeLeft).s}
                   </span>
                 </span>
               </div>

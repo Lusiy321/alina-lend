@@ -34,7 +34,7 @@ export default function App() {
           <Guarantee />
           <Ownership />
           <Solution />
-          <HowItWorks />
+          {/* <HowItWorks /> */}
           <FinalCTA />
           <Pricing />
           <ContactFormCard />

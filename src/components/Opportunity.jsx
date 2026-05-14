@@ -323,7 +323,7 @@ export default function Opportunity() {
                   <p className="text-slate-300 text-sm sm:text-lg leading-relaxed">
                     ...is{" "}
                     <strong className="text-[#c44a32]">
-                      $10,000 in free advertising
+                      up to $10,000 in free advertising
                     </strong>{" "}
                     that disappears forever. It doesn't accumulate or carry
                     over. Waiting 3 months to start costs you{" "}
@@ -405,7 +405,7 @@ export default function Opportunity() {
             <p className="text-slate-300 text-center lg:text-left text-base sm:text-2xl mb-10 leading-relaxed">
               Google gives eligible nonprofits{" "}
               <strong className="text-white">
-                $10,000/month in free search ads
+                up to $10,000/month +1 in free search ads
               </strong>{" "}
               — so you show up first when people look for what you do.
             </p>
