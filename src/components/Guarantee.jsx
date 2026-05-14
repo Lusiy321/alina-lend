@@ -116,8 +116,7 @@ export default function Guarantee() {
                   }
                   className="btn-primary text-base sm:text-2xl !py-3 sm:!py-4 !px-6 sm:!px-8 mx-auto"
                 >
-                  Claim My Free Period →
-                  <ChevronRight size={18} />
+                  Check My Eligibility →
                 </button>
               </div>
             </div>

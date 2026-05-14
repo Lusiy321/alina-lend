@@ -154,7 +154,7 @@ export default function Pricing() {
                     onClick={scrollToEligibility}
                     className="btn-primary text-base sm:text-2xl !py-3 sm:!py-4 !px-6 sm:!px-8"
                   >
-                    → Start My Free Period
+                    Check My Eligibility →
                   </button>
                 </div>
               </div>
@@ -236,7 +236,7 @@ export default function Pricing() {
                   }
                   className="btn-primary text-base sm:text-2xl !py-3 sm:!py-4 !px-6 sm:!px-8 mb-3"
                 >
-                  → Start My Free Period
+                  Check My Eligibility →
                 </button>
               </div>
               <p className="text-center text-slate-500 text-sm sm:text-lg">

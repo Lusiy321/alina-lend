@@ -80,12 +80,6 @@ export default function Hero() {
                     Google for Nonprofits Partners
                   </span>
                 </div>
-                <div className="flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#ffffff] border border-[#ebe9e0] shadow-sm w-full sm:w-auto justify-center">
-                  <span>🎁</span>
-                  <span className="text-[#161514] text-xs sm:text-lg font-semibold tracking-wide">
-                    We get you the Google Grant — for free
-                  </span>
-                </div>
               </div>
             </AnimItem>
 
@@ -200,6 +194,13 @@ export default function Hero() {
                   ))}
                 </div>
               </AnimItem>
+            </div>
+            <div className="flex items-center gap-2.5 px-5 py-2.5 sm:w-auto justify-center">
+              <span>🎁</span>
+              <span className="text-[#161514] text-xs sm:text-lg font-semibold tracking-wide">
+                We get your grant approved — free. So you see it’s real before
+                you commit.
+              </span>
             </div>
           </div>
         </AnimSection>

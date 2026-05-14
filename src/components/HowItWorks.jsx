@@ -155,7 +155,6 @@ export default function HowItWorks() {
           className="btn-primary text-base sm:text-2xl !py-3 sm:!py-4 !px-6 sm:!px-8"
         >
           Check My Eligibility →
-          <ChevronRight size={18} />
         </button>
       </div>
       <div className="section-divider mx-auto max-w-6xl mt-16" />
