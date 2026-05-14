@@ -195,12 +195,38 @@ export default function Hero() {
                 </div>
               </AnimItem>
             </div>
-            <div className="flex items-center gap-2.5 px-5 py-2.5 sm:w-auto justify-center">
-              <span>🎁</span>
-              <span className="text-[#161514] text-xs sm:text-lg font-semibold tracking-wide">
-                We get your grant approved — free. So you see it’s real before
-                you commit.
-              </span>
+            <div className="flex justify-center w-full">
+              <div className="relative flex flex-row items-center justify-center gap-4 w-full max-w-2xl px-6 py-5 rounded-2xl bg-[#f0eee6] border border-[#ebe9e0] shadow-md overflow-hidden">
+                {/* Pulsing dot */}
+                <span className="absolute top-3 right-3 flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-40" />
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500 opacity-70" />
+                </span>
+                <span className="text-4xl leading-none select-none drop-shadow">
+                  🎁
+                </span>
+                <div className="flex flex-col text-left">
+                  <span className="text-[#161514] text-sm sm:text-lg font-bold leading-snug">
+                    We get your grant approved —{" "}
+                    <a
+                      href="#contact-form"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        document
+                          .querySelector("#contact-form")
+                          ?.scrollIntoView({ behavior: "smooth" });
+                      }}
+                      className="text-emerald-700 underline underline-offset-4 decoration-dotted hover:text-emerald-900 transition-colors cursor-pointer"
+                    >
+                      free
+                    </a>
+                    .
+                  </span>
+                  <span className="text-[#52504C] text-xs sm:text-sm font-normal leading-snug mt-0.5">
+                    So you see it&apos;s real before you commit.
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </AnimSection>
