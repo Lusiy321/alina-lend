@@ -99,7 +99,7 @@ export default function Credibility() {
   return (
     <section
       id="credibility"
-      className="relative py-14 sm:py-20 overflow-hidden"
+      className="relative py-8 sm:py-20 overflow-hidden"
     >
       <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-purple-500/6 rounded-full blur-[140px] pointer-events-none" />
 
@@ -110,14 +110,14 @@ export default function Credibility() {
               We've Done This Before.{" "}
               <span className="text-white">Here's the Proof.</span>
             </h2>
-            <p className="text-slate-400 text-center mb-16 max-w-xl mx-auto text-sm sm:text-base">
+            <p className="text-slate-400 text-center mb-8 sm:mb-16 max-w-xl mx-auto text-sm sm:text-base">
               Real results from real nonprofits.
             </p>
           </AnimItem>
         </AnimSection>
 
         {/* Clutch badge */}
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center mb-4">
           <a href="https://clutch.co" target="_blank" rel="noopener noreferrer">
             <img
               src="/icons/poweredCluch.png"
@@ -216,7 +216,7 @@ export default function Credibility() {
             </motion.div>
           ))}
         </motion.div>
-        <div className="mt-6 mb-8 flex justify-center">
+        <div className="mt-4 sm:mt-6 mb-6 sm:mb-8 flex justify-center">
           <button
             onClick={scrollToEligibility}
             className="btn-primary text-base sm:text-2xl !py-3 sm:!py-4 !px-6 sm:!px-8"

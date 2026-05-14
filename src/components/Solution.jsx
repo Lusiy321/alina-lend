@@ -18,12 +18,12 @@ const services = [
   { icon: "✓", text: "Ad copywriting, creative testing, optimization" },
   { icon: "✓", text: "Conversion tracking (donations, signups, form fills)" },
   { icon: "✓", text: "Monthly optimization and compliance management" },
-  { icon: "✓", text: "Monthly performance reports in plain English" },
+  { icon: "✓", text: "Monthly performance reports" },
 ];
 
 export default function Solution() {
   return (
-    <section className="relative py-14 sm:py-32 overflow-hidden">
+    <section className="relative py-4 sm:py-32 overflow-hidden">
       <div className="absolute top-1/2 left-0 w-[600px] h-[400px] bg-emerald-500/6 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -34,7 +34,7 @@ export default function Solution() {
               <br />
               You Focus on Your Mission.
             </h2>
-            <p className="text-slate-400 text-center max-w-2xl mx-auto mb-16 text-sm sm:text-lg lg:text-2xl">
+            <p className="text-slate-400 text-center max-w-2xl mx-auto mb-8 sm:mb-16 text-sm sm:text-lg lg:text-2xl">
               Our team takes over your Google Ad Grant from start to finish — or
               builds it from the ground up. No Google Ads expertise required. No
               new staff. No learning curve.
@@ -42,7 +42,7 @@ export default function Solution() {
           </AnimItem>
         </AnimSection>
 
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
+        <div className="grid lg:grid-cols-2 gap-3 sm:gap-8 items-start">
           {/* Services list */}
           <AnimSection>
             <AnimItem variant={fadeUp}>
@@ -55,7 +55,7 @@ export default function Solution() {
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={staggerContainer}
-                  className="space-y-3"
+                  className="space-y-1 sm:space-y-3"
                 >
                   {services.map((s, i) => (
                     <motion.div
@@ -78,7 +78,7 @@ export default function Solution() {
 
           {/* Right column */}
           <AnimSection>
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-2 sm:gap-5">
               {/* No website callout */}
               <AnimItem variant={fadeUp}>
                 <div className="rounded-2xl p-6 sm:p-8 bg-gradient-to-br from-blue-500/10 to-blue-700/5 border border-blue-500/20">
@@ -149,7 +149,7 @@ export default function Solution() {
           </AnimSection>
         </div>
       </div>
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center mt-6 sm:mt-10">
         <button
           onClick={() =>
             document
@@ -161,7 +161,7 @@ export default function Solution() {
           Check My Eligibility →
         </button>
       </div>
-      <div className="section-divider mx-auto max-w-6xl mt-8 sm:mt-16" />
+      <div className="section-divider mx-auto max-w-6xl mt-6 sm:mt-16" />
     </section>
   );
 }
