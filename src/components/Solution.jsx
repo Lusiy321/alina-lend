@@ -96,7 +96,7 @@ export default function Solution() {
                     the requirements — we'll build it for you.
                   </p>
                   <div className="p-4 rounded-xl bg-white/[0.04] border border-white/[0.07]">
-                    <p className="text-blue-300 text-base sm:text-lg font-semibold mb-2">
+                    <p className="text-white-400 text-base sm:text-lg font-semibold mb-2">
                       Included in your onboarding:
                     </p>
                     <ul className="space-y-1.5 text-slate-400 text-sm sm:text-lg">
