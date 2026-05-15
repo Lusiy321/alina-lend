@@ -224,9 +224,65 @@ export default function Opportunity() {
   return (
     <section
       id="opportunity"
-      className="relative -mt-8 pt-0 pb-24 sm:pb-32 overflow-hidden scroll-mt-[88px]"
+      className="relative pt-16 pb-24 sm:pb-32 overflow-hidden scroll-mt-[100px]"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        {/* Phone mockup demo — left, h2+p — right */}
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 mb-20">
+          {/* Left: phone mockup */}
+          <div className="flex flex-col items-center shrink-0">
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center text-slate-400 text-sm sm:text-base font-semibold tracking-[0.2em] uppercase mb-10"
+            >
+              Here's what it looks like in Google Search
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 32 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+              viewport={{ once: true }}
+            >
+              <PhoneMockup />
+            </motion.div>
+          </div>
+
+          {/* Right: h2 + p + button */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+            viewport={{ once: true }}
+            className="flex-1 min-w-0"
+          >
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white text-center lg:text-left leading-tight mb-6">
+              $10,000/Month. Every Month. Already Yours If You Qualify.
+            </h2>
+            <p className="text-slate-300 text-center lg:text-left text-base sm:text-2xl mb-10 leading-relaxed">
+              Google gives eligible nonprofits{" "}
+              <strong className="text-white">
+                up to $10,000/month +1 in free search ads
+              </strong>{" "}
+              — so you show up first when people look for what you do.
+            </p>
+            <div className="flex justify-center lg:justify-start">
+              <button
+                onClick={() =>
+                  document
+                    .querySelector("#contact-form")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="btn-primary text-base sm:text-2xl !py-3 sm:!py-4 !px-6 sm:!px-8"
+              >
+                Check My Eligibility →
+              </button>
+            </div>
+          </motion.div>
+        </div>
+
         {/* Two column layout */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {/* Left: Search queries visual */}
@@ -367,62 +423,6 @@ export default function Opportunity() {
             </button>
           </div>
         </AnimSection>
-
-        {/* Phone mockup demo — left, h2+p — right */}
-        <div className="mt-20 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-          {/* Left: phone mockup */}
-          <div className="flex flex-col items-center shrink-0">
-            <motion.p
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center text-slate-400 text-sm sm:text-base font-semibold tracking-[0.2em] uppercase mb-10"
-            >
-              Here's what it looks like in Google Search
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 32 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-              viewport={{ once: true }}
-            >
-              <PhoneMockup />
-            </motion.div>
-          </div>
-
-          {/* Right: h2 + p + button */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-            viewport={{ once: true }}
-            className="flex-1 min-w-0"
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white text-center lg:text-left leading-tight mb-6">
-              $10,000/Month. Every Month. Already Yours If You Qualify.
-            </h2>
-            <p className="text-slate-300 text-center lg:text-left text-base sm:text-2xl mb-10 leading-relaxed">
-              Google gives eligible nonprofits{" "}
-              <strong className="text-white">
-                up to $10,000/month +1 in free search ads
-              </strong>{" "}
-              — so you show up first when people look for what you do.
-            </p>
-            <div className="flex justify-center lg:justify-start">
-              <button
-                onClick={() =>
-                  document
-                    .querySelector("#contact-form")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-                className="btn-primary text-base sm:text-2xl !py-3 sm:!py-4 !px-6 sm:!px-8"
-              >
-                Check My Eligibility →
-              </button>
-            </div>
-          </motion.div>
-        </div>
       </div>
 
       <div className="section-divider mx-auto max-w-6xl mt-16" />

@@ -27,8 +27,8 @@ export default function App() {
         <Hero />
         <SocialProofBar />
         <Suspense fallback={<div style={{ minHeight: "100vh" }} />}>
-          <Problem />
           <Opportunity />
+          <Problem />
           <WhatIsGrants />
           <Credibility />
           <Guarantee />

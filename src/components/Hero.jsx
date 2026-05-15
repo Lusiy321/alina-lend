@@ -44,13 +44,13 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 sm:pt-20 pb-16 bg-[#ffffff]"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-12 pb-2 bg-[#ffffff]"
     >
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         <AnimSection>
-          <div className="flex flex-col gap-8 lg:gap-10">
+          <div className="flex flex-col gap-3 sm:gap-8 lg:gap-10">
             {/* Google for Nonprofits Partners badge — centered above everything */}
-            <AnimItem variant={fadeUp}>
+            <AnimItem variant={fadeUp} className="pt-6 lg:pt-12">
               <div className="flex flex-col sm:flex-row justify-center items-center gap-3 w-full sm:w-auto">
                 <div className="flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#ffffff] border border-[#ebe9e0] shadow-sm w-full sm:w-auto justify-center">
                   <svg
@@ -126,15 +126,37 @@ export default function Hero() {
             <div className="flex flex-col items-center">
               {/* Free grant + timeline pills */}
               <AnimItem variant={fadeUp}>
-                <div className="flex flex-col items-center gap-3 mb-4 sm:mb-10">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#f0eee6]">
-                    <Clock size={16} className="text-[#3f5028]" />
-                    <span className="text-[#52504C] text-sm sm:text-lg font-medium">
-                      Grant live in as little as{" "}
-                      <strong className="text-[#3f5028] font-bold">
-                        2 weeks
-                      </strong>
+                <div className="flex justify-center w-full mb-6">
+                  <div className="relative flex flex-row items-center justify-center gap-4 w-full max-w-2xl px-6 py-5 rounded-2xl bg-[#f0eee6] border border-[#ebe9e0] shadow-md overflow-hidden">
+                    {/* Pulsing dot */}
+                    <span className="absolute top-3 right-3 flex h-3 w-3">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-40" />
+                      <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500 opacity-70" />
                     </span>
+                    <span className="text-4xl leading-none select-none drop-shadow">
+                      🎁
+                    </span>
+                    <div className="flex flex-col text-left">
+                      <span className="text-[#161514] text-sm sm:text-lg font-bold leading-snug">
+                        We get your grant approved —{" "}
+                        <a
+                          href="#contact-form"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            document
+                              .querySelector("#contact-form")
+                              ?.scrollIntoView({ behavior: "smooth" });
+                          }}
+                          className="text-emerald-700 underline underline-offset-4 decoration-dotted hover:text-emerald-900 transition-colors cursor-pointer"
+                        >
+                          free
+                        </a>
+                        .
+                      </span>
+                      <span className="text-[#52504C] text-xs sm:text-sm font-normal leading-snug mt-0.5">
+                        So you see it&apos;s real before you commit.
+                      </span>
+                    </div>
                   </div>
                 </div>
               </AnimItem>
@@ -185,7 +207,17 @@ export default function Hero() {
                   </div>
                 </div>
               </AnimItem>
-
+              <div className="flex flex-col items-center gap-3 mb-4 sm:mb-10">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#f0eee6]">
+                  <Clock size={16} className="text-[#3f5028]" />
+                  <span className="text-[#52504C] text-sm sm:text-lg font-medium">
+                    Grant live in as little as{" "}
+                    <strong className="text-[#3f5028] font-bold">
+                      2 weeks
+                    </strong>
+                  </span>
+                </div>
+              </div>
               <AnimItem variant={fadeUp}>
                 <div className="grid grid-cols-3 gap-4 sm:gap-8">
                   {[
@@ -204,39 +236,6 @@ export default function Hero() {
                   ))}
                 </div>
               </AnimItem>
-            </div>
-            <div className="flex justify-center w-full">
-              <div className="relative flex flex-row items-center justify-center gap-4 w-full max-w-2xl px-6 py-5 rounded-2xl bg-[#f0eee6] border border-[#ebe9e0] shadow-md overflow-hidden">
-                {/* Pulsing dot */}
-                <span className="absolute top-3 right-3 flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-40" />
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500 opacity-70" />
-                </span>
-                <span className="text-4xl leading-none select-none drop-shadow">
-                  🎁
-                </span>
-                <div className="flex flex-col text-left">
-                  <span className="text-[#161514] text-sm sm:text-lg font-bold leading-snug">
-                    We get your grant approved —{" "}
-                    <a
-                      href="#contact-form"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        document
-                          .querySelector("#contact-form")
-                          ?.scrollIntoView({ behavior: "smooth" });
-                      }}
-                      className="text-emerald-700 underline underline-offset-4 decoration-dotted hover:text-emerald-900 transition-colors cursor-pointer"
-                    >
-                      free
-                    </a>
-                    .
-                  </span>
-                  <span className="text-[#52504C] text-xs sm:text-sm font-normal leading-snug mt-0.5">
-                    So you see it&apos;s real before you commit.
-                  </span>
-                </div>
-              </div>
             </div>
           </div>
         </AnimSection>
