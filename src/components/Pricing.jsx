@@ -131,7 +131,7 @@ export default function Pricing() {
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-white/70 text-sm sm:text-lg line-through mb-0.5">
+                    <div className="text-white/70 text-lg sm:text-4xl line-through mb-0.5">
                       $1,250/mo
                     </div>
                     <div className="text-white font-black text-5xl sm:text-6xl leading-none drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">

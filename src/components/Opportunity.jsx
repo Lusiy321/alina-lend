@@ -313,7 +313,7 @@ export default function Opportunity() {
             </div>
 
             {/* Urgency math */}
-            <div className="urgency-box p-6">
+            {/* <div className="urgency-box p-6">
               <div className="flex items-start gap-3">
                 <span className="text-2xl">⚠️</span>
                 <div>
@@ -333,7 +333,7 @@ export default function Opportunity() {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </motion.div>
         </div>
 
